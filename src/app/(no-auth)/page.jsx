@@ -261,7 +261,7 @@ export default function Home() {
 
 
 
-          <Subtitle> <h2 className="text-[white] text-[20px]">Transporte Terrestre</h2></Subtitle>
+          <Subtitle> <h2 className="text-[white] text-[25px] font-medium">TRANSPORTE TERRESTRE</h2></Subtitle>
           <p className='bg-[#ffffffbd] p-5 my-10'>
             Somos uno de los principales operadores en el mercado de envíos internacionales. Ofrecemos servicios de transporte aéreo analizando
             sus necesidades y proponiendo soluciones adecuadas para su negocio.
@@ -315,7 +315,7 @@ export default function Home() {
 
 
 
-          <Subtitle>Transporte Terrestre</Subtitle>
+          <Subtitle><h2 className="text-[white] text-[25px] font-medium">TRANSPORTE AEREO</h2></Subtitle>
           <p className='bg-[#ffffffbd] p-5 my-10'>
             Somos uno de los principales operadores en el mercado de envíos internacionales. Ofrecemos servicios de transporte aéreo analizando
             sus necesidades y proponiendo soluciones adecuadas para su negocio.
@@ -366,7 +366,7 @@ export default function Home() {
 
 
 
-          <Subtitle>Transporte Terrestre</Subtitle>
+          <Subtitle><h2 className="text-[white] text-[25px] font-medium">TRANSPORTE MARITIMO</h2></Subtitle>
           <p className='bg-[#ffffffbd] p-5 my-10'>
             Somos uno de los principales operadores en el mercado de envíos internacionales. Ofrecemos servicios de transporte aéreo analizando
             sus necesidades y proponiendo soluciones adecuadas para su negocio.
