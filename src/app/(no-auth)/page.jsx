@@ -63,7 +63,7 @@ export default function Home() {
   }, [user])
 
   return (
-    <main className="h-screen w-full  ">
+    <main className="h-screen w-screen ">
 
 
       {/* <AwesomeSlider className='relative' play={true} interval={6000}> */}
@@ -183,7 +183,7 @@ export default function Home() {
 
       </section>
 
-      <section className='w-full z-1000' id="Servicios">
+      <section className='w-full z-1000 overflow-x-hidden' id="Servicios">
         {/* <div className='relative min-h-screen w-full flex flex-col  lg:flex-row justify-around items-center  bg-gradient-to-tr from-[#26678d9c] via-[#41b9ff81] to-[#26678d9c]'> */}
 
         <div className='relative px-5 py-12 w-full flex flex-col  lg:flex-row justify-around items-center  bg-gradient-to-tr from-[#2A52BE] via-[#3259c5] to-[#2A52BE]'>
@@ -271,7 +271,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='relative w-full bg-[#4f8cc5]' id="Servicios">
+      <section className='relative w-full bg-[#4f8cc5] overflow-x-hidden' id="Servicios">
 
         <video className='absolute top-0  w-full min-h-[100vh] object-cover z-10' autoPlay loop muted>
           <source src="/highway2.mp4" type="video/mp4" />
@@ -386,7 +386,7 @@ export default function Home() {
 
 
 
-      <section className='relative w-full bg-[#3aa0ffa6]' id="Servicios">
+      <section className='relative w-full bg-[#3aa0ffa6] overflow-x-hidden' id="Servicios">
 
         <video className='absolute top-0  w-full h-[100vh] object-cover object-right-bottom z-10' autoPlay loop muted>
           <source src="/avion.mp4" type="video/mp4" />
@@ -496,7 +496,7 @@ export default function Home() {
 
 
 
-      <section className='relative w-full bg-[#4f8cc5]' id="Servicios">
+      <section className='relative w-full bg-[#4f8cc5] overflow-x-hidden' id="Servicios">
 
         <video className='absolute top-0  w-full h-[100vh] object-cover z-10' autoPlay loop muted>
           <source src="/barco.mp4" type="video/mp4" />
