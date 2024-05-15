@@ -2,7 +2,7 @@
 import { useUser } from '@/context/Context'
 
 import { useState } from 'react'
-import { signOut } from '@/firebase/utils'
+import { handleSignOut } from '@/firebase/utils'
 import { useRouter } from 'next/navigation';
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -36,7 +36,7 @@ function Home({ children }) {
     setNav(!nav)
   }
 
-  const signOutConfirm = () => {
+  const handleSignOutConfirm = () => {
     setUserProfile(null)
     setUserCart({})
     setUserProduct(undefined),
@@ -45,7 +45,7 @@ function Home({ children }) {
     setUserData(null)
     router.push('/')
     setModal('')
-    signOut()
+    handleSignOut()
   }
   console.log(user)
   console.log(userDB)

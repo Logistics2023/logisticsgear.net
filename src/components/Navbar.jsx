@@ -3,7 +3,7 @@ import { useRouter } from 'next/navigation';
 import { useEffect, useState, useRef } from 'react'
 import { useUser } from '@/context/Context'
 import Link from 'next/link'
-import { signOut } from '@/firebase/utils'
+import { handleSignOut } from '@/firebase/utils'
 import Modal from '@/components/Modal'
 
 
