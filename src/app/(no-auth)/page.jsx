@@ -65,7 +65,7 @@ export default function Home() {
         {/* <div className='relative min-h-[100vh] py-[50px] w-full lg:pt-10 pb-0 flex flex-col justify-around lg:flex-row items-center z-20' style={{background: '-gradient(to bottom, rgba(0, 6, 24, 0.87), #061A4D79)'}}> */}
 
 
-        {navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)
+        {navigator && navigator !== undefined && navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)
           ? <video className='fixed bottom-0 w-full h-[100vh] pb-[10px] object-cover object-bottom ' autoPlay loop muted>
             <source src={"/bg-comp.mp4"} type="video/mp4" />
           </video>
@@ -111,37 +111,37 @@ export default function Home() {
           </AutoplaySlider> */}
 
 
-<div>
-<div className=' flex justify-center'>
-  <TextMaquina />
-</div>
+          <div>
+            <div className=' flex justify-center'>
+              <TextMaquina />
+            </div>
 
-  
-          <div className='bg-transparent flex justify-center flex-wrap px-5 py-10 pb-[200px]'>
-            <ScrollAnimation
-              animateIn='tada'
-              initiallyVisible={true}>
-              <Tag theme='Primary'>Transporte Terrestre</Tag>
-            </ScrollAnimation>
-            <ScrollAnimation animateIn='tada'
-              initiallyVisible={true}>
-              <Tag theme='Primary'>Transporte Maritimo</Tag>
-            </ScrollAnimation>
-            <ScrollAnimation animateIn='tada'
-              initiallyVisible={true}>
-              <Tag theme='Primary'>Transporte Aereo</Tag>
-            </ScrollAnimation>
-            <ScrollAnimation animateIn='tada'
-              initiallyVisible={true}>
-              <Tag theme='Primary'>Despacho Aduanero</Tag>
-            </ScrollAnimation>
-            <ScrollAnimation animateIn='tada'
-              initiallyVisible={true}>
-              <Tag theme='Primary'>Carga Proyecto</Tag>
-            </ScrollAnimation>
+
+            <div className='bg-transparent flex justify-center flex-wrap px-5 py-10 pb-[200px]'>
+              <ScrollAnimation
+                animateIn='tada'
+                initiallyVisible={true}>
+                <Tag theme='Primary'>Transporte Terrestre</Tag>
+              </ScrollAnimation>
+              <ScrollAnimation animateIn='tada'
+                initiallyVisible={true}>
+                <Tag theme='Primary'>Transporte Maritimo</Tag>
+              </ScrollAnimation>
+              <ScrollAnimation animateIn='tada'
+                initiallyVisible={true}>
+                <Tag theme='Primary'>Transporte Aereo</Tag>
+              </ScrollAnimation>
+              <ScrollAnimation animateIn='tada'
+                initiallyVisible={true}>
+                <Tag theme='Primary'>Despacho Aduanero</Tag>
+              </ScrollAnimation>
+              <ScrollAnimation animateIn='tada'
+                initiallyVisible={true}>
+                <Tag theme='Primary'>Carga Proyecto</Tag>
+              </ScrollAnimation>
+            </div>
           </div>
-</div>
-          
+
 
 
           {/* <Slider content={services}/> */}
@@ -261,7 +261,7 @@ export default function Home() {
 
 
 
-          <Subtitle>Transporte Terrestre</Subtitle>
+          <Subtitle> <h2 className="text-[white] text-[20px]">Transporte Terrestre</h2></Subtitle>
           <p className='bg-[#ffffffbd] p-5 my-10'>
             Somos uno de los principales operadores en el mercado de envíos internacionales. Ofrecemos servicios de transporte aéreo analizando
             sus necesidades y proponiendo soluciones adecuadas para su negocio.
