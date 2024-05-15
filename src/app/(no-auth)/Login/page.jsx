@@ -1,6 +1,6 @@
 'use client'
 import { useUser } from '@/context/Context'
-import { onAuth, signInWithEmailAndPassword } from '@/firebase/utils'
+import { onAuth, signInWithEmail } from '@/firebase/utils'
 import { useEffect, useState, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -25,7 +25,7 @@ export default function Home() {
     e.preventDefault()
     let email = e.target[0].value
     let password = e.target[1].value
-    email.length !== 0 && password.length !== 0 ? signInWithEmailAndPassword(email, password, setUserSuccess) : setUserSuccess('Complete')
+    email.length !== 0 && password.length !== 0 ? signInWithEmail(email, password, setUserSuccess) : setUserSuccess('Complete')
   }
 
 

@@ -1,6 +1,6 @@
 'use client';
 import { useUser } from '@/context/Context'
-import { onAuth, signUpWithEmailAndPassword } from '@/firebase/utils'
+import { onAuth, signUpWithEmail } from '@/firebase/utils'
 import { useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -24,7 +24,7 @@ export default function Home() {
     e.preventDefault()
     let email = e.target[0].value
     let password = e.target[1].value
-    signUpWithEmailAndPassword(email, password, setUserProfile)
+    signUpWithEmail(email, password, setUserProfile)
   }
 
   useEffect(() => {
