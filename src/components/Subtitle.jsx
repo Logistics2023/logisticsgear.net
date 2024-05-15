@@ -11,7 +11,10 @@ export default function Button({ styled, children }) {
 
             }}
       >
+        <div className="p-3 bg-black">
             {children}
+        </div>
+            
 
         </ScrollAnimation>
     )

@@ -21,9 +21,9 @@ import 'react-awesome-slider/dist/styles.css';
 
 
 function Componente() {
-  return <div className='bg-[#ffffffcb] my-5 flex  lg:max-w-[500px] lg:text-[18px] lg:mx-5 lg:flex lg:flex-col lg:justify-center lg:items-center'>
+  return <div className='bg-[#ffffffcb] my-5 flex  lg:max-w-[500px] lg:text-[18px] lg:mx-5 lg:flex lg:flex-col lg:justify-center lg:items-center rounded-[15px]'>
     <img src="/container.png" className=" w-[150px] lg:max-w-[200px] object-contain p-5" alt="" />
-    <div className="w-full bg-[#2e62d1ce] p-5 py-5 ">
+    <div className="w-full bg-[#2e62d1ce] p-5 py-5 rounded-b-[15px]">
       <h4 className="w-full text-left font-medium border-b-[3px] text-white pb-5 pl-0 ml-0 border-[#ffffff] p-5">ESTACIÓN DE FLETE DE CONTENEDORES</h4>
 
       <p className="text-white " >
@@ -278,7 +278,7 @@ export default function Home() {
         </video>
         <div className='absolute top-0  w-full min-h-[100vh] object-cover z-10 bg-[#00000067]'></div>
 
-        <div className='relative min-h-screen w-full flex flex-col lg:flex-wrap  lg:flex-row lg:justify-center justify-top items-center z-20 p-5'>
+        <div className='relative min-h-screen w-full flex flex-col lg:flex-wrap  lg:flex-row lg:justify-center justify-top z-20 '>
 
 
 
@@ -288,9 +288,92 @@ export default function Home() {
 
           <Componente></Componente><Componente></Componente><Componente></Componente>
 
+          <div className='relative px-5 py-12 w-full flex flex-col  lg:flex-row justify-around items-center  bg-gradient-to-tr from-[#2A52BE] via-[#3259c5] to-[#2A52BE]'>
 
+            {/* <video className='absolute top-0  w-full h-[100vh] object-cover' autoPlay loop muted>
+  <source src="/highway2.mp4" type="video/mp4" />
+</video> */}
+            <div>
+
+              <Subtitle><h3 className='text-[30px] text-[white] text-center font-medium  py-10'>Network Globale</h3></Subtitle>
+              <ScrollAnimation animateIn='bounceInRight'
+                animateOut='bounceOutLeft'
+                initiallyVisible={true}
+              >
+                <p className=' text-[16px] text-[white]'>
+                  Nuestra red internacional, en combinación con las relaciones establecidas con los transportistas más importantes del mundo,
+                  nos permite responder rápidamente a las demandas de los mercados locales gracias a una amplia presencia en todo el territorio.
+                </p>
+              </ScrollAnimation>
+
+            </div>
+
+
+
+
+            <div className='w-full text-[white] grid grid-cols-2 gap-5 py-12'>
+
+
+              <ScrollAnimation animateIn='flipInX'
+                afterAnimatedIn={function afterAnimatedIn(v) {
+                  var t = "Animate In finished.\n";
+                  t += 'v.onScreen: ' + v.onScreen + '\n';
+                  t += 'v.inViewport: ' + v.inViewport;
+
+                }}
+                initiallyVisible={true}>
+                <div className='flex flex-col justify-center items-center'>
+                  <span className='text-[30px] font-medium'>1996</span>
+                  <span className='text-center'>AÑO DE FUNDACIÓN</span>
+                </div>
+              </ScrollAnimation>
+              <ScrollAnimation animateIn='flipInX'
+                afterAnimatedIn={function afterAnimatedIn(v) {
+                  var t = "Animate In finished.\n";
+                  t += 'v.onScreen: ' + v.onScreen + '\n';
+                  t += 'v.inViewport: ' + v.inViewport;
+
+                }}
+                initiallyVisible={true}>
+                <div className='flex flex-col justify-center items-center'>
+                  <span className='text-[25px] font-medium'>La paz, Bolivia</span>
+                  <span className='text-center'>SEDE MUNDIAL</span>
+                </div>
+              </ScrollAnimation>
+              <ScrollAnimation animateIn='flipInX'
+                afterAnimatedIn={function afterAnimatedIn(v) {
+                  var t = "Animate In finished.\n";
+                  t += 'v.onScreen: ' + v.onScreen + '\n';
+                  t += 'v.inViewport: ' + v.inViewport;
+
+                }}>
+                <div className='flex flex-col justify-center items-center'>
+                  <span className='text-[30px] font-medium'>100 000 $</span>
+                  <span className='text-center'>FACTURACIÓN EN DOLARES EN 2023</span>
+                </div>
+              </ScrollAnimation>
+              <ScrollAnimation animateIn='flipInX'
+                afterAnimatedIn={function afterAnimatedIn(v) {
+                  var t = "Animate In finished.\n";
+                  t += 'v.onScreen: ' + v.onScreen + '\n';
+                  t += 'v.inViewport: ' + v.inViewport;
+
+                }}
+                initiallyVisible={true}>
+                <div className='flex flex-col justify-center items-center'>
+                  <span className='text-[30px] font-medium'>1996</span>
+                  <span className='text-center'>AÑO DE FUNDACIÓN</span>
+                </div>
+              </ScrollAnimation>
+
+
+
+            </div>
+
+          </div>
 
         </div>
+
       </section>
 
 
@@ -312,12 +395,96 @@ export default function Home() {
 
         {/* <div className='absolute top-0  w-full h-[100vh] object-cover z-10 bg-[#0c9af841]'></div> */}
 
-        <div className='relative min-h-screen w-full flex flex-col lg:flex-wrap  lg:flex-row lg:justify-center justify-top items-center z-20 p-5'>
+        <div className='relative min-h-screen w-full flex flex-col lg:flex-wrap  lg:flex-row lg:justify-center justify-top  z-20'>
 
 
 
           <Subtitle><h2 className="w-[100vw] text-[white] text-center text-[25px] font-medium">TRANSPORTE AEREO</h2></Subtitle>
           <Componente></Componente><Componente></Componente><Componente></Componente>
+
+          <div className='relative px-5 py-12 w-full flex flex-col  lg:flex-row justify-around items-center  bg-gradient-to-tr from-[#2A52BE] via-[#3259c5] to-[#2A52BE]'>
+
+            {/* <video className='absolute top-0  w-full h-[100vh] object-cover' autoPlay loop muted>
+  <source src="/highway2.mp4" type="video/mp4" />
+</video> */}
+            <div>
+
+              <Subtitle><h3 className='text-[30px] text-[white] text-center font-medium  py-10'>Network Globale</h3></Subtitle>
+              <ScrollAnimation animateIn='bounceInRight'
+                animateOut='bounceOutLeft'
+                initiallyVisible={true}
+              >
+                <p className=' text-[16px] text-[white]'>
+                  Nuestra red internacional, en combinación con las relaciones establecidas con los transportistas más importantes del mundo,
+                  nos permite responder rápidamente a las demandas de los mercados locales gracias a una amplia presencia en todo el territorio.
+                </p>
+              </ScrollAnimation>
+
+            </div>
+
+
+
+
+            <div className='w-full text-[white] grid grid-cols-2 gap-5 py-12'>
+
+
+              <ScrollAnimation animateIn='flipInX'
+                afterAnimatedIn={function afterAnimatedIn(v) {
+                  var t = "Animate In finished.\n";
+                  t += 'v.onScreen: ' + v.onScreen + '\n';
+                  t += 'v.inViewport: ' + v.inViewport;
+
+                }}
+                initiallyVisible={true}>
+                <div className='flex flex-col justify-center items-center'>
+                  <span className='text-[30px] font-medium'>1996</span>
+                  <span className='text-center'>AÑO DE FUNDACIÓN</span>
+                </div>
+              </ScrollAnimation>
+              <ScrollAnimation animateIn='flipInX'
+                afterAnimatedIn={function afterAnimatedIn(v) {
+                  var t = "Animate In finished.\n";
+                  t += 'v.onScreen: ' + v.onScreen + '\n';
+                  t += 'v.inViewport: ' + v.inViewport;
+
+                }}
+                initiallyVisible={true}>
+                <div className='flex flex-col justify-center items-center'>
+                  <span className='text-[25px] font-medium'>La paz, Bolivia</span>
+                  <span className='text-center'>SEDE MUNDIAL</span>
+                </div>
+              </ScrollAnimation>
+              <ScrollAnimation animateIn='flipInX'
+                afterAnimatedIn={function afterAnimatedIn(v) {
+                  var t = "Animate In finished.\n";
+                  t += 'v.onScreen: ' + v.onScreen + '\n';
+                  t += 'v.inViewport: ' + v.inViewport;
+
+                }}>
+                <div className='flex flex-col justify-center items-center'>
+                  <span className='text-[30px] font-medium'>100 000 $</span>
+                  <span className='text-center'>FACTURACIÓN EN DOLARES EN 2023</span>
+                </div>
+              </ScrollAnimation>
+              <ScrollAnimation animateIn='flipInX'
+                afterAnimatedIn={function afterAnimatedIn(v) {
+                  var t = "Animate In finished.\n";
+                  t += 'v.onScreen: ' + v.onScreen + '\n';
+                  t += 'v.inViewport: ' + v.inViewport;
+
+                }}
+                initiallyVisible={true}>
+                <div className='flex flex-col justify-center items-center'>
+                  <span className='text-[30px] font-medium'>1996</span>
+                  <span className='text-center'>AÑO DE FUNDACIÓN</span>
+                </div>
+              </ScrollAnimation>
+
+
+
+            </div>
+
+          </div>
         </div>
       </section>
 
@@ -337,19 +504,100 @@ export default function Home() {
 
         <div className='absolute top-0  w-full h-[100vh] object-cover z-10 bg-[#00529657]'></div>
 
-        <div className='relative min-h-screen w-full flex flex-col lg:flex-wrap  lg:flex-row lg:justify-center justify-top items-center z-20 p-5'>
+        <div className='relative min-h-screen w-full flex flex-col lg:flex-wrap  lg:flex-row lg:justify-center justify-top z-20 '>
 
 
 
           <Subtitle><h2 className="w-[100vw] text-[white] text-center text-[25px] font-medium">TRANSPORTE MARITIMO</h2></Subtitle>
           <Componente></Componente><Componente></Componente><Componente></Componente>
+          <div className='relative px-5 py-12 w-full flex flex-col  lg:flex-row justify-around items-center  bg-gradient-to-tr from-[#2A52BE] via-[#3259c5] to-[#2A52BE]'>
+            <div>
 
+              <Subtitle><h3 className='text-[30px] text-[white] text-center font-medium  py-10'>Network Globale</h3></Subtitle>
+              <ScrollAnimation animateIn='bounceInRight'
+                animateOut='bounceOutLeft'
+                initiallyVisible={true}
+              >
+                <p className=' text-[16px] text-[white]'>
+                  Nuestra red internacional, en combinación con las relaciones establecidas con los transportistas más importantes del mundo,
+                  nos permite responder rápidamente a las demandas de los mercados locales gracias a una amplia presencia en todo el territorio.
+                </p>
+              </ScrollAnimation>
+
+            </div>
+
+
+
+
+            <div className='w-full text-[white] grid grid-cols-2 gap-5 py-12'>
+
+
+              <ScrollAnimation animateIn='flipInX'
+                afterAnimatedIn={function afterAnimatedIn(v) {
+                  var t = "Animate In finished.\n";
+                  t += 'v.onScreen: ' + v.onScreen + '\n';
+                  t += 'v.inViewport: ' + v.inViewport;
+
+                }}
+                initiallyVisible={true}>
+                <div className='flex flex-col justify-center items-center'>
+                  <span className='text-[30px] font-medium'>1996</span>
+                  <span className='text-center'>AÑO DE FUNDACIÓN</span>
+                </div>
+              </ScrollAnimation>
+              <ScrollAnimation animateIn='flipInX'
+                afterAnimatedIn={function afterAnimatedIn(v) {
+                  var t = "Animate In finished.\n";
+                  t += 'v.onScreen: ' + v.onScreen + '\n';
+                  t += 'v.inViewport: ' + v.inViewport;
+
+                }}
+                initiallyVisible={true}>
+                <div className='flex flex-col justify-center items-center'>
+                  <span className='text-[25px] font-medium'>La paz, Bolivia</span>
+                  <span className='text-center'>SEDE MUNDIAL</span>
+                </div>
+              </ScrollAnimation>
+              <ScrollAnimation animateIn='flipInX'
+                afterAnimatedIn={function afterAnimatedIn(v) {
+                  var t = "Animate In finished.\n";
+                  t += 'v.onScreen: ' + v.onScreen + '\n';
+                  t += 'v.inViewport: ' + v.inViewport;
+
+                }}>
+                <div className='flex flex-col justify-center items-center'>
+                  <span className='text-[30px] font-medium'>100 000 $</span>
+                  <span className='text-center'>FACTURACIÓN EN DOLARES EN 2023</span>
+                </div>
+              </ScrollAnimation>
+              <ScrollAnimation animateIn='flipInX'
+                afterAnimatedIn={function afterAnimatedIn(v) {
+                  var t = "Animate In finished.\n";
+                  t += 'v.onScreen: ' + v.onScreen + '\n';
+                  t += 'v.inViewport: ' + v.inViewport;
+
+                }}
+                initiallyVisible={true}>
+                <div className='flex flex-col justify-center items-center'>
+                  <span className='text-[30px] font-medium'>1996</span>
+                  <span className='text-center'>AÑO DE FUNDACIÓN</span>
+                </div>
+              </ScrollAnimation>
+
+
+
+            </div>
+
+          </div>
         </div>
       </section>
 
 
 
+      <section className="bg-[#2A52BE]">
 
+
+      </section>
 
 
 
