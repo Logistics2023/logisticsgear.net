@@ -11,7 +11,7 @@ export default function Button({ styled, children }) {
 
             }}
       >
-        <div className="p-3 bg-black">
+        <div className="p-10" style={{paddingTop:'50px'}}>
             {children}
         </div>
             
