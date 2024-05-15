@@ -39,7 +39,7 @@ export default function BottomNavigation({ rol }) {
         return () => window.removeEventListener('scroll', controlNavbar);
     }, [lastScrollY, show]);
     return <>
-        <nav class={`fixed  w-screen  lg:border-gray-200 transition-all  z-40 ${show ? 'top-0' : 'top-[-100px]'}`}>
+        <nav class={`fixed  w-screen  lg:border-gray-200 transition-all  z-40  ${show ? 'top-0' : 'top-[-100px]'}`}>
             <div class="w-screen flex flex-wrap items-center justify-between lg:border-b-[2px] lg:border-gray-50 mx-auto py-4 px-4 lg:px-8">
                 <Link href="/" class="flex items-center">
                     <img src="/logo.svg" class="h-[50px] mr-3" alt="Flowbite Logo" />
@@ -50,7 +50,7 @@ export default function BottomNavigation({ rol }) {
                         <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
                     </svg>
                 </button>
-                <div class="hidden w-screen md:block md:w-auto" id="navbar-default">
+                <div class="hidden w-screen md:block md:w-auto " id="navbar-default">
                     <ul class="list-none font-medium flex flex-col p-4 md:p-0 mt-0 rounded-lg md:flex-row md:space-x-8  ">
                         <li onClick={() => handlerNavItem('Herramientas')}>
                             <a href="#" className={`block py-2 pl-3 pr-4 text-[14px] rounded   md:border-0  md:p-0   transition-all hover:text-[#F1BA06] cursor-pointer z-30 ${navItem === 'Herramientas' ? 'text-[#F1BA06]' : 'text-white'}`} >Herramientas</a>

@@ -31,7 +31,7 @@ export default function BottomNavigation({ rol }) {
     }
 
 
-    return <div className={`fixed w-screen left-0 bottom-0 w-screen grid h-[70px] lg-hidden grid-cols-5 bg-[#2A52BE] border-t-[5px] border-white mx-auto font-medium z-50`}>
+    return <div className={`fixed w-screen left-0 bottom-0 w-screen grid h-[70px] lg:hidden grid-cols-5 bg-[#2A52BE] border-t-[5px] border-white mx-auto font-medium z-50`}>
 
         <Button click={() => redirectHandler(`/Cliente`)} name={'Cliente'}>
             <svg className="w-11 h-11 mb-1 text-gray-600 redrounded-full  p-1" fill="white" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">

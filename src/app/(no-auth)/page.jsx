@@ -19,6 +19,25 @@ import "animate.css/animate.compat.css"
 
 import 'react-awesome-slider/dist/styles.css';
 
+
+function Componente() {
+  return <div className='bg-[#ffffffcb] my-5 flex  lg:max-w-[500px] lg:text-[18px] lg:mx-5 lg:flex lg:flex-col lg:justify-center lg:items-center'>
+    <img src="/container.png" className=" w-[150px] lg:max-w-[200px] object-contain p-5" alt="" />
+    <div className="w-full bg-[#2e62d1ce] p-5 py-5 ">
+      <h4 className="w-full text-left font-medium border-b-[3px] text-white pb-5 pl-0 ml-0 border-[#ffffff] p-5">ESTACIÓN DE FLETE DE CONTENEDORES</h4>
+
+      <p className="text-white " >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit repellat voluptatem magni sequi in dolor voluptates quibusdam natus.
+      </p>
+      <div className="relative flex justify-end w-[100%]">
+        <button className="inline-block bg-[#ffb834] px-10 text-[16px] text-center font-medium px-2.5 py-2 m-1  
+      border border-gray-400 cursor-pointer rounded-full">Saber mas</button>
+      </div>
+    </div>
+  </div>
+}
+
+
 export default function Home() {
   const { user, introVideo, userDB, setUserProfile, setUserSuccess, success, setUserData, postsIMG, setUserPostsIMG } = useUser()
 
@@ -64,7 +83,7 @@ export default function Home() {
           </video> */}
         {/* <div className='relative min-h-[100vh] py-[50px] w-full lg:pt-10 pb-0 flex flex-col justify-around lg:flex-row items-center z-20' style={{background: '-gradient(to bottom, rgba(0, 6, 24, 0.87), #061A4D79)'}}> */}
 
-{/* 
+        {/* 
         {window && window !== undefined && navigator && navigator !== undefined && navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)
           ? <video className='fixed bottom-0 w-full h-[100vh] pb-[10px] object-cover object-bottom ' autoPlay loop muted>
             <source src={"/bg-comp.mp4"} type="video/mp4" />
@@ -75,11 +94,11 @@ export default function Home() {
             <source src={"/vista1-comp.mp4"} type="video/mp4" />
           </video>
         } */}
-<video className='fixed bottom-0 w-full h-[100vh] pb-[10px] object-cover object-bottom ' autoPlay loop muted>
-            <source src={"/vista1-comp.mp4"} type="video/mp4" />
-          </video>
+        <video className='fixed bottom-0 w-full h-[100vh] pb-[10px] object-cover object-bottom ' autoPlay loop muted>
+          <source src={"/vista1-comp.mp4"} type="video/mp4" />
+        </video>
 
-        {/* <div className='absolute top-0  w-full h-[100vh] object-cover z-10 bg-[#00000067]'></div> */}
+        <div className='absolute top-0  w-full h-[100vh] object-cover z-10 bg-[#1969ff67]'></div>
 
         {/* <div className='relative min-h-[100vh] py-[50px] w-full lg:pt-10 pb-0 flex flex-col justify-around lg:flex-row items-center shadow-black shadow-2xl  z-20' style={{ background: '-gradient(to bottom, #000000,  #000000c7, #00000050' }}> */}
 
@@ -113,13 +132,13 @@ export default function Home() {
           </AutoplaySlider> */}
 
 
-          <div>
-            <div className=' flex justify-center'>
+          <div className='lg:scale-150'>
+            <div className=' flex justify-center  font-bold'>
               <TextMaquina />
             </div>
 
 
-            <div className='bg-transparent flex justify-center flex-wrap px-5 py-10 pb-[200px]'>
+            <div className='bg-transparent flex justify-center flex-wrap px-5 max-w-[400px] py-10 pb-[200px] lg:pb-0'>
               <ScrollAnimation
                 animateIn='tada'
                 initiallyVisible={true}>
@@ -254,43 +273,23 @@ export default function Home() {
 
       <section className='relative w-full bg-[#4f8cc5]' id="Servicios">
 
-        <video className='absolute top-0  w-full h-[100vh] object-cover z-10' autoPlay loop muted>
+        <video className='absolute top-0  w-full min-h-[100vh] object-cover z-10' autoPlay loop muted>
           <source src="/highway2.mp4" type="video/mp4" />
         </video>
-        <div className='absolute top-0  w-full h-[100vh] object-cover z-10 bg-[#00000067]'></div>
+        <div className='absolute top-0  w-full min-h-[100vh] object-cover z-10 bg-[#00000067]'></div>
 
-        <div className='relative min-h-screen w-full flex flex-col  lg:flex-row justify-top items-center z-20 p-5'>
+        <div className='relative min-h-screen w-full flex flex-col lg:flex-wrap  lg:flex-row lg:justify-center justify-top items-center z-20 p-5'>
 
 
 
-          <Subtitle> <h2 className="text-[white] text-[25px] font-medium">TRANSPORTE TERRESTRE</h2></Subtitle>
-          <p className='bg-[#ffffffbd] p-5 my-10'>
-            Somos uno de los principales operadores en el mercado de envíos internacionales. Ofrecemos servicios de transporte aéreo analizando
-            sus necesidades y proponiendo soluciones adecuadas para su negocio.
-          </p>
+          <Subtitle> <h2 className="w-[100vw] text-[white] text-center text-[25px] font-medium">TRANSPORTE TERRESTRE</h2></Subtitle>
 
-          <p className='bg-[#ffffffbd] p-5 my-10'>
-            Somos uno de los principales operadores en el mercado de envíos internacionales. Ofrecemos servicios de transporte aéreo analizando
-            sus necesidades y proponiendo soluciones adecuadas para su negocio.
-          </p>
 
-          <p className='bg-[#ffffffbd] p-5 my-10'>
-            Somos uno de los principales operadores en el mercado de envíos internacionales. Ofrecemos servicios de transporte aéreo analizando
-            sus necesidades y proponiendo soluciones adecuadas para su negocio.
-          </p>
-          {/* <ul className='min-w-[80%] grid grid-cols-1 gap-4'>
-            {
-              services.map((i, index) =>
-                <div key={index}>
-                  <Service i={i} index={index}></Service>
-                  <div className="inline-flex items-center justify-center w-full">
-                    <hr className="w-64 h-px my-8 bg-[#9EC011] border-0 dark:bg-gray-700" />
-                    <span className="absolute px-3 font-medium text-[#0090A8] -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-gray-900 z-0">•</span>
-                  </div>
-                </div>
-              )
-            }
-          </ul> */}
+
+          <Componente></Componente><Componente></Componente><Componente></Componente>
+
+
+
         </div>
       </section>
 
@@ -313,38 +312,12 @@ export default function Home() {
 
         {/* <div className='absolute top-0  w-full h-[100vh] object-cover z-10 bg-[#0c9af841]'></div> */}
 
-        <div className='relative min-h-screen w-full flex flex-col  lg:flex-row justify-top items-center z-20 p-5'>
+        <div className='relative min-h-screen w-full flex flex-col lg:flex-wrap  lg:flex-row lg:justify-center justify-top items-center z-20 p-5'>
 
 
 
-          <Subtitle><h2 className="text-[white] text-[25px] font-medium">TRANSPORTE AEREO</h2></Subtitle>
-          <p className='bg-[#ffffffbd] p-5 my-10'>
-            Somos uno de los principales operadores en el mercado de envíos internacionales. Ofrecemos servicios de transporte aéreo analizando
-            sus necesidades y proponiendo soluciones adecuadas para su negocio.
-          </p>
-
-          <p className='bg-[#ffffffbd] p-5 my-10'>
-            Somos uno de los principales operadores en el mercado de envíos internacionales. Ofrecemos servicios de transporte aéreo analizando
-            sus necesidades y proponiendo soluciones adecuadas para su negocio.
-          </p>
-
-          <p className='bg-[#ffffffbd] p-5 my-10'>
-            Somos uno de los principales operadores en el mercado de envíos internacionales. Ofrecemos servicios de transporte aéreo analizando
-            sus necesidades y proponiendo soluciones adecuadas para su negocio.
-          </p>
-          {/* <ul className='min-w-[80%] grid grid-cols-1 gap-4'>
-            {
-              services.map((i, index) =>
-                <div key={index}>
-                  <Service i={i} index={index}></Service>
-                  <div className="inline-flex items-center justify-center w-full">
-                    <hr className="w-64 h-px my-8 bg-[#9EC011] border-0 dark:bg-gray-700" />
-                    <span className="absolute px-3 font-medium text-[#0090A8] -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-gray-900 z-0">•</span>
-                  </div>
-                </div>
-              )
-            }
-          </ul> */}
+          <Subtitle><h2 className="w-[100vw] text-[white] text-center text-[25px] font-medium">TRANSPORTE AEREO</h2></Subtitle>
+          <Componente></Componente><Componente></Componente><Componente></Componente>
         </div>
       </section>
 
@@ -364,38 +337,13 @@ export default function Home() {
 
         <div className='absolute top-0  w-full h-[100vh] object-cover z-10 bg-[#00529657]'></div>
 
-        <div className='relative min-h-screen w-full flex flex-col  lg:flex-row justify-top items-center z-20 p-5'>
+        <div className='relative min-h-screen w-full flex flex-col lg:flex-wrap  lg:flex-row lg:justify-center justify-top items-center z-20 p-5'>
 
 
 
-          <Subtitle><h2 className="text-[white] text-[25px] font-medium">TRANSPORTE MARITIMO</h2></Subtitle>
-          <p className='bg-[#ffffffbd] p-5 my-10'>
-            Somos uno de los principales operadores en el mercado de envíos internacionales. Ofrecemos servicios de transporte aéreo analizando
-            sus necesidades y proponiendo soluciones adecuadas para su negocio.
-          </p>
+          <Subtitle><h2 className="w-[100vw] text-[white] text-center text-[25px] font-medium">TRANSPORTE MARITIMO</h2></Subtitle>
+          <Componente></Componente><Componente></Componente><Componente></Componente>
 
-          <p className='bg-[#ffffffbd] p-5 my-10'>
-            Somos uno de los principales operadores en el mercado de envíos internacionales. Ofrecemos servicios de transporte aéreo analizando
-            sus necesidades y proponiendo soluciones adecuadas para su negocio.
-          </p>
-
-          <p className='bg-[#ffffffbd] p-5 my-10'>
-            Somos uno de los principales operadores en el mercado de envíos internacionales. Ofrecemos servicios de transporte aéreo analizando
-            sus necesidades y proponiendo soluciones adecuadas para su negocio.
-          </p>
-          {/* <ul className='min-w-[80%] grid grid-cols-1 gap-4'>
-            {         
-              services.map((i, index) =>
-                <div key={index}>
-                  <Service i={i} index={index}></Service>
-                  <div className="inline-flex items-center justify-center w-full">
-                    <hr className="w-64 h-px my-8 bg-[#9EC011] border-0 dark:bg-gray-700" />
-                    <span className="absolute px-3 font-medium text-[#0090A8] -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-gray-900 z-0">•</span>
-                  </div>
-                </div>
-              )
-            }
-          </ul> */}
         </div>
       </section>
 
