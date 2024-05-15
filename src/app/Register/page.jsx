@@ -1,5 +1,5 @@
 'use client'
-import { writeUserData, readUserData } from '@/firebase/utils'
+import { writeUserData, getSpecificData } from '@/firebase/utils'
 import { useUser } from '@/context/Context'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -41,7 +41,7 @@ function Home() {
         if (user && user.rol) router.push('/Cliente')
         if (user == null || user  == undefined || user.role !== 'authenticated') router.push('/SignUp')
 
-        if (user && user.rol) readUserData('Users', user.uuid, setUserData)
+        if (user && user.rol) getSpecificData('Users', user.uuid, setUserData)
         if (user && user.rol) router.push('/Cliente')
     }, [user]);
 
