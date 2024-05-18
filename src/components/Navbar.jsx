@@ -48,16 +48,25 @@ export default function BottomNavigation({ rol }) {
 
 
 
-                {pathname !== '/Login' && pathname !== '/SignUp' && pathname !== '/Register' && <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" onClick={openNav} aria-controls="navbar-default" aria-expanded="false">
-                    <span className="sr-only">Open main menu</span>
-                    <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 17 14">
-                        <path stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
-                    </svg>
-                </button>}
+                {pathname !== '/Login' && pathname !== '/SignUp' && pathname !== '/Register' && <div>
+                    {
+                        user ? <button className='relative right-5 z-50 bg-[#F7BE38] p-2 px-5 rounded-[5px] border' onClick={()=>handleSignOut()}>Cerrar Sesión</button> :
+                            <button className='relative right-5 z-50 bg-[#F7BE38] p-2 px-5 rounded-[5px] border' onClick={() => router.push('/Login')}>Iniciar Sesión</button>
+
+                    }
+
+                    <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" onClick={openNav} aria-controls="navbar-default" aria-expanded="false">
+                        <span className="sr-only">Open main menu</span>
+                        <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 17 14">
+                            <path stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
+                        </svg>
+                    </button>
+
+                </div>
+
+                }
                 <div className='relativebg-red-500 w-full flex justify-end'>
-
                     <button className='absolute top-12 mt-12 right-5 z-50 bg-[#F7BE38] p-2 px-5 rounded-[5px] border'>Administrador</button>
-
                 </div>
                 <div className="hidden w-screen md:block md:w-auto " id="navbar-default">
                     <ul className="list-none font-medium flex flex-col p-4 md:p-0 mt-0 rounded-lg md:flex-row md:space-x-8  ">

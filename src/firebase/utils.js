@@ -52,7 +52,7 @@ function signInWithEmail (email, password, setUserSuccess) {
 }
 
 function handleSignOut () {
-  handleSignOut(auth).then(() => {
+  signOut(auth).then(() => {
   // Sign-out successful.
 }).catch((error) => {
   // An error happened.
