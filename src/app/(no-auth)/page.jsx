@@ -74,9 +74,7 @@ function Item({ e1, e2 }) {
 function Section({ subtitle, video, gradiente, id, children }) {
   return <section className='relative w-full bg-[#4f8cc5] overflow-x-hidden overflow-hidden' id={id}>
 
-    <video className='absolute top-0  w-full min-h-[100vh] object-cover z-10' autoPlay loop muted>
-      <source src={video} type="video/mp4" />
-    </video>
+   
 
 
 
@@ -86,23 +84,11 @@ function Section({ subtitle, video, gradiente, id, children }) {
     {/* <div className='absolute px-5 py-12 w-full min-h-[100vh]  bg-gradient-to-tr from-[#000000c5] via-[#3259c5a9] to-[#2A52BE]'>
           */}
 
-     {/* <div className='absolute px-5 py-12 w-full min-h-screen flex flex-col z-30 lg:flex-row justify-around items-center  bg-gradient-to-tr from-[#000000c5] via-[#3259c5a9] to-[#2A52BE]'>
+    {/* <div className='absolute px-5 py-12 w-full min-h-screen flex flex-col z-30 lg:flex-row justify-around items-center  bg-gradient-to-tr from-[#000000c5] via-[#3259c5a9] to-[#2A52BE]'>
           </div> */}
 
-
-    <div className='relative min-h-screen w-full flex flex-col lg:flex-wrap  lg:flex-row lg:justify-center justify-top z-20 '>
-      {/* <Subtitle> <h2 className="w-[100vw] text-[white] text-center text-[25px] font-medium">{subtitle}</h2></Subtitle> */}
-
-
-
-      {/* <div className='relative px-5 py-12 w-full flex flex-col  lg:flex-row justify-around items-center  bg-gradient-to-tr from-[#2A52BE] via-[#3259c5] to-[#2A52BE]'>
-        <div> */}
-        {/* <div className='relative px-5 py-12 w-full flex flex-col  lg:flex-row justify-around items-center  bg-gradient-to-tr from-[#2A52BE] via-[#3259c5] to-[#2A52BE]'>
-          <div> */}
-          {/* <div className='relative px-5 py-12 w-full flex flex-col  lg:flex-row justify-around items-center  bg-gradient-to-tr from-[#000000c5] via-[#3259c5a9] to-[#2A52BE]'>
-          <div> */}
-          <div className='relative px-5 py-12 w-full flex flex-col  lg:flex-row justify-around items-center  '>
-          <div>
+    <div className='relative px-5 py-12 w-full min-h-[50vh] mflex flex-col z-50 lg:flex-row justify-around items-center  bg-gradient-to-tr from-[#000000c5] via-[#3259c5a9] to-[#2A52BE] '>
+        <div>
           <Subtitle><h3 className='text-[30px] text-[white] text-center font-medium  py-10'>Transporte terrestre</h3></Subtitle>
           <ScrollAnimation animateIn='bounceInRight'
             animateOut='bounceOutLeft'
@@ -124,11 +110,25 @@ function Section({ subtitle, video, gradiente, id, children }) {
         </div>
 
       </div>
+    <div className='relative min-h-screen w-full flex flex-col lg:flex-wrap  lg:flex-row lg:justify-center justify-top z-20 '>
+      {/* <Subtitle> <h2 className="w-[100vw] text-[white] text-center text-[25px] font-medium">{subtitle}</h2></Subtitle> */}
+
+      <video className='absolute bottom-0  w-full h-full min-h-[100vh] object-cover z-10' autoPlay loop muted>
+      <source src={video} type="video/mp4" />
+    </video>
+
+      {/* <div className='relative px-5 py-12 w-full flex flex-col  lg:flex-row justify-around items-center  bg-gradient-to-tr from-[#2A52BE] via-[#3259c5] to-[#2A52BE]'>
+        <div> */}
+      {/* <div className='relative px-5 py-12 w-full flex flex-col  lg:flex-row justify-around items-center  bg-gradient-to-tr from-[#2A52BE] via-[#3259c5] to-[#2A52BE]'>
+          <div> */}
+      {/* <div className='relative px-5 py-12 w-full flex flex-col  lg:flex-row justify-around items-center '>
+          <div> */}
+  
 
 
 
       {db.map((i, index) => {
-        return <div className='inline px-5' key={index}>
+        return <div className='inline px-5 z-50' key={index}>
           <Componente title={i.title} image={i.image} paragraph={i.paragraph} />
         </div>
       })}
@@ -308,7 +308,7 @@ export default function Home() {
             </div> */}
             <a href="tel:76586948">
 
-                          <marquee className="text-white py-5" behavior="" direction="">Llamanos ya clickea aqui (+591) 76586948</marquee>
+              <marquee className="text-white py-5" behavior="" direction="">Llamanos ya clickea aqui (+591) 76586948</marquee>
 
             </a>
           </div>
@@ -324,7 +324,7 @@ export default function Home() {
 
         <div className='relative px-5 py-12 w-full flex flex-col  lg:flex-row justify-around items-center  bg-gradient-to-tr from-[#000000c5] via-[#3259c5a9] to-[#2A52BE]'>
           <div>
-          {/* <div className='relative px-5 py-12 w-full flex flex-col  lg:flex-row justify-around items-center  bg-gradient-to-tr from-[#2A52BE] via-[#3259c5] to-[#2A52BE]'>
+            {/* <div className='relative px-5 py-12 w-full flex flex-col  lg:flex-row justify-around items-center  bg-gradient-to-tr from-[#2A52BE] via-[#3259c5] to-[#2A52BE]'>
           <div> */}
             <Subtitle><h3 className='text-[30px] text-[white] text-center font-medium  py-5'>Logistics Gear</h3></Subtitle>
             <ScrollAnimation animateIn='bounceInRight'
