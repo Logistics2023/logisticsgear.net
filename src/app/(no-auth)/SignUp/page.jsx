@@ -56,6 +56,7 @@ export default function Home() {
     </video>  */}
         <img src="/truck.png" className='absolute  w-screen h-screen bg-[#01A7EB] object-cover lg:hidden' alt="" />
 
+        <img src="/airplane-bg.jpg" className='absolute  w-screen h-screen bg-[#01A7EB] object-cover hidden md:block' alt="" />
 
 
         <form className={`space-y-6 lg:space-y-3 w-[100%] rounded-[30px] max-w-[350px] z-10 lg:scale-110`} onSubmit={signUpHandler} >

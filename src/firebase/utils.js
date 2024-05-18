@@ -10,6 +10,7 @@ const db = getDatabase(app);
 
 function onAuth(setUserProfile, setUserData) {
   return onAuthStateChanged(auth, (user) => {
+    console.log(user)
     if (user) {
       setUserProfile(user)
       getData(setUserData)
