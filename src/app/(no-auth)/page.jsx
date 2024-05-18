@@ -183,7 +183,7 @@ export default function Home() {
     QRreaderUtils(e, setFilterQR,)
   }
 
-console.log(userDB)
+console.log(user)
   useEffect(() => {
     // user === undefined && onAuth(setUserProfile)
     // if (user !== undefined && user !== null) router.replace('/Cliente')

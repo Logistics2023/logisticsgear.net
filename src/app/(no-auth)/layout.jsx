@@ -1,13 +1,14 @@
 'use client'
 import { useUser } from '@/context/Context'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { handleSignOut } from '@/firebase/utils'
 import { useRouter } from 'next/navigation';
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import BottomNavigation from '@/components/BottomNavigation'
 import Navbar from '@/components/Navbar'
+import { onAuth } from '@/firebase/utils'
 
 function Home({ children }) {
   const router = useRouter()
@@ -50,13 +51,20 @@ function Home({ children }) {
   console.log(user)
   console.log(userDB)
 
+
+
+
+  console.log(user)
+  useEffect(() => {
+      if (user === undefined) onAuth(setUserProfile, setUserData)
+  }, [user])
   return (
     <div  className="relative">
-      <main  className={`relative min-w-screen  lg:pb-0  lg:min-w-auto my-[0px]   lg:min-h-screen  ${nav ? 'w-screen pl-[100vw] overflow-hidden ' : '  lg:px-[0px]'}`} onClick={() => setNav(false)} style={{ transition: 'all 0.5' }}>
+      {user !== undefined && <main  className={`relative min-w-screen  lg:pb-0  lg:min-w-auto my-[0px]   lg:min-h-screen  ${nav ? 'w-screen pl-[100vw] overflow-hidden ' : '  lg:px-[0px]'}`} onClick={() => setNav(false)} style={{ transition: 'all 0.5' }}>
         {children}
         { pathname !== '/Login' &&  pathname !== '/SignUp' &&  pathname !== '/Register' && <BottomNavigation/>}
 
-      </main>
+      </main>}
     </div>
   )
 }
