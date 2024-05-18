@@ -111,16 +111,16 @@ function Section({ subtitle, video, gradiente, id, children }) {
       </div>
       <div  className='grid grid-cols-2 gap-2 w-full '>
         <span></span>
-        {/* <button type="button" class="w-full  border-[2px]  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center ">
+        {/* <button type="button" className="w-full  border-[2px]  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center ">
   Contactar
-  <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+  <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
   </svg>
 </button> */}
 
-        <button type="button" class="w-full border-[2px]  text-gray-900 bg-[#F7BE38] hover:bg-[#F7BE38]/90 focus:ring-4 focus:outline-none focus:ring-[#F7BE38]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center ">
+        <button type="button" className="w-full border-[2px]  text-gray-900 bg-[#F7BE38] hover:bg-[#F7BE38]/90 focus:ring-4 focus:outline-none focus:ring-[#F7BE38]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center ">
           Orden de servicio
-          <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+          <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
           </svg>
         </button>
@@ -183,15 +183,14 @@ export default function Home() {
     QRreaderUtils(e, setFilterQR,)
   }
 
-
+console.log(userDB)
   useEffect(() => {
     // user === undefined && onAuth(setUserProfile)
     // if (user !== undefined && user !== null) router.replace('/Cliente')
   }, [user])
 
   return (
-    <main  className={`h-screen w-screen `}>
-
+    <main  className={`relative h-screen w-screen `}>
 
 
 
@@ -220,16 +219,16 @@ export default function Home() {
             <br />
             <div  className='grid grid-cols-2 gap-2 w-full '>
 
-              <button type="button" onClick={() => redirectHandlerWindow(`https://api.whatsapp.com/send?phone=+59176586948&text=hola%20Logistics%20Gear`)} class="w-full  border-[2px]  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center ">
+              <button type="button" onClick={() => redirectHandlerWindow(`https://api.whatsapp.com/send?phone=+59176586948&text=hola%20Logistics%20Gear`)} className="w-full  border-[2px]  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center ">
                 Contactar
-                <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                   <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
                 </svg>
               </button>
 
-              <button type="button" class="w-full border-[2px]  text-gray-900 bg-[#F7BE38] hover:bg-[#F7BE38]/90 focus:ring-4 focus:outline-none focus:ring-[#F7BE38]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center ">
+              <button type="button" className="w-full border-[2px]  text-gray-900 bg-[#F7BE38] hover:bg-[#F7BE38]/90 focus:ring-4 focus:outline-none focus:ring-[#F7BE38]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center ">
                 Orden de servicio
-                <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                   <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
                 </svg>
               </button>
@@ -240,32 +239,32 @@ export default function Home() {
 
 
             <div  className='bg-[#ffffffc7] p-5'>
-              <ul class="flex border-b border-[blue] ">
-                <li class={`-mb-px mr-1 ${element === 'TRACKING' && 'bg-[#F7BE38] border border-[blue] border-b-transparent'}`} onClick={() => setElement('TRACKING')}>
-                  <a class=" inline-block rounded-t py-2 px-2 text-blue-700 font-semibold" href="#">Tracking</a>
+              <ul className="flex border-b border-[blue] ">
+                <li className={`-mb-px mr-1 ${element === 'TRACKING' && 'bg-[#F7BE38] border border-[blue] border-b-transparent'}`} onClick={() => setElement('TRACKING')}>
+                  <a className=" inline-block rounded-t py-2 px-2 text-blue-700 font-semibold" href="#">Tracking</a>
                 </li>
-                <li class={`-mb-px mr-1 ${element === 'FCL' && 'bg-[#F7BE38] border border-[blue] border-b-transparent'}`} onClick={() => setElement('FCL')}>
-                  <a class=" inline-block rounded-t py-2 px-2 text-blue-500 font-semibold" href="#">Cotizador FCL</a>
+                <li className={`-mb-px mr-1 ${element === 'FCL' && 'bg-[#F7BE38] border border-[blue] border-b-transparent'}`} onClick={() => setElement('FCL')}>
+                  <a className=" inline-block rounded-t py-2 px-2 text-blue-500 font-semibold" href="#">Cotizador FCL</a>
                 </li>
-                <li class={`-mb-px mr-1 ${element === 'FTL' && 'bg-[#F7BE38] border border-[blue] border-b-transparent'}`} onClick={() => setElement('FTL')}>
-                  <a class=" inline-block rounded-t py-2 px-2 text-blue-500  font-semibold" href="#">Cotizador FTL</a>
+                <li className={`-mb-px mr-1 ${element === 'FTL' && 'bg-[#F7BE38] border border-[blue] border-b-transparent'}`} onClick={() => setElement('FTL')}>
+                  <a className=" inline-block rounded-t py-2 px-2 text-blue-500  font-semibold" href="#">Cotizador FTL</a>
                 </li>
               </ul>
 
 
-              {element === 'TRACKING' && <form class="max-w-md w-full flex  mx-auto pt-5">
+              {element === 'TRACKING' && <form className="max-w-md w-full flex  mx-auto pt-5">
 
 
 
-                <div class="flex w-full ">
-                  <label for="location-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Your Email</label>
-                  <div class="relative w-full">
-                    <input type="search" id="location-search" class="block p-3 w-full h-full z-20 text-sm text-gray-900   rounded-[5px] focus:ring-blue-500 focus:border-blue-500" placeholder="Codigo de tracking" required />
-                    <button type="submit" class="absolute top-0 end-0 h-full p-2.5 text-sm font-medium text-white bg-blue-700 rounded-r-[5px] border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
-                      <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                <div className="flex w-full ">
+                  <label htmlFor="location-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Your Email</label>
+                  <div className="relative w-full">
+                    <input type="search" id="location-search" className="block p-3 w-full h-full z-20 text-sm text-gray-900   rounded-[5px] focus:ring-blue-500 focus:border-blue-500" placeholder="Codigo de tracking" required />
+                    <button type="submit" className="absolute top-0 end-0 h-full p-2.5 text-sm font-medium text-white bg-blue-700 rounded-r-[5px] border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                      <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                       </svg>
-                      <span class="sr-only">Search</span>
+                      <span className="sr-only">Search</span>
                     </button>
 
                   </div>
@@ -299,36 +298,36 @@ export default function Home() {
 
 
               {element === 'FCL' &&
-                <form class="max-w-md py-5">
-                  <div class="relative z-0 w-full mb-5 group  ">
-                    <input type="search" id="location-search" class="block p-3 w-full h-full z-20 text-sm text-gray-900   rounded-[5px] focus:ring-blue-500 focus:border-blue-500" placeholder="Origen" required />
-                    {/* <label for="floating_email" class="peer-focus:font-medium z-30 absolute text-sm text-gray-500 duration-300 transform -translate-y-10 scale-75 top-3  origin-[0px] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Origen</label> */}
+                <form className="max-w-md py-5">
+                  <div className="relative z-0 w-full mb-5 group  ">
+                    <input type="search" id="location-search" className="block p-3 w-full h-full z-20 text-sm text-gray-900   rounded-[5px] focus:ring-blue-500 focus:border-blue-500" placeholder="Origen" required />
+                    {/* <label htmlFor="floating_email" className="peer-focus:font-medium z-30 absolute text-sm text-gray-500 duration-300 transform -translate-y-10 scale-75 top-3  origin-[0px] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Origen</label> */}
                   </div>
-                  <div class="relative z-0 w-full mb-5 group">
-                    <input type="search" id="location-search" class="block p-3 w-full h-full z-20 text-sm text-gray-900   rounded-[5px] focus:ring-blue-500 focus:border-blue-500" placeholder="Destino" required />
-                    {/* <label for="floating_password" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Destino</label> */}
+                  <div className="relative z-0 w-full mb-5 group">
+                    <input type="search" id="location-search" className="block p-3 w-full h-full z-20 text-sm text-gray-900   rounded-[5px] focus:ring-blue-500 focus:border-blue-500" placeholder="Destino" required />
+                    {/* <label htmlFor="floating_password" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Destino</label> */}
                   </div>
 
 
-                  <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full  px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Continuar</button>
+                  <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full  px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Continuar</button>
                 </form>}
 
 
 
 
               {element === 'FTL' &&
-                <form class="max-w-md py-5">
-                  <div class="relative z-0 w-full mb-5 group  ">
-                    <input type="search" id="location-search" class="block p-3 w-full h-full z-20 text-sm text-gray-900   rounded-[5px] focus:ring-blue-500 focus:border-blue-500" placeholder="Origen" required />
-                    {/* <label for="floating_email" class="peer-focus:font-medium z-30 absolute text-sm text-gray-500 duration-300 transform -translate-y-10 scale-75 top-3  origin-[0px] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Origen</label> */}
+                <form className="max-w-md py-5">
+                  <div className="relative z-0 w-full mb-5 group  ">
+                    <input type="search" id="location-search" className="block p-3 w-full h-full z-20 text-sm text-gray-900   rounded-[5px] focus:ring-blue-500 focus:border-blue-500" placeholder="Origen" required />
+                    {/* <label htmlFor="floating_email" className="peer-focus:font-medium z-30 absolute text-sm text-gray-500 duration-300 transform -translate-y-10 scale-75 top-3  origin-[0px] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Origen</label> */}
                   </div>
-                  <div class="relative z-0 w-full mb-5 group">
-                    <input type="search" id="location-search" class="block p-3 w-full h-full z-20 text-sm text-gray-900   rounded-[5px] focus:ring-blue-500 focus:border-blue-500" placeholder="Destino" required />
-                    {/* <label for="floating_password" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Destino</label> */}
+                  <div className="relative z-0 w-full mb-5 group">
+                    <input type="search" id="location-search" className="block p-3 w-full h-full z-20 text-sm text-gray-900   rounded-[5px] focus:ring-blue-500 focus:border-blue-500" placeholder="Destino" required />
+                    {/* <label htmlFor="floating_password" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Destino</label> */}
                   </div>
 
 
-                  <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full  px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Continuar</button>
+                  <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full  px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Continuar</button>
                 </form>}
 
 
@@ -432,16 +431,16 @@ export default function Home() {
 
           <div  className='grid grid-cols-2 gap-2 w-full '>
 
-            <button type="button" class="w-full border-[2px]  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center ">
+            <button type="button" className="w-full border-[2px]  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center ">
               MISIÓN saber mas...
-              <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+              <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
               </svg>
             </button>
 
-            <button type="button" class="w-full border-[2px] text-gray-900 bg-[#F7BE38] hover:bg-[#F7BE38]/90 focus:ring-4 focus:outline-none focus:ring-[#F7BE38]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center ">
+            <button type="button" className="w-full border-[2px] text-gray-900 bg-[#F7BE38] hover:bg-[#F7BE38]/90 focus:ring-4 focus:outline-none focus:ring-[#F7BE38]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center ">
               VISIÓN saber mas...
-              <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+              <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
               </svg>
             </button>
