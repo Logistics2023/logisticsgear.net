@@ -74,7 +74,7 @@ function Item({ e1, e2 }) {
 function Section({ subtitle, video, gradiente, id, children }) {
   return <section className='relative w-full bg-[#4f8cc5] overflow-x-hidden overflow-hidden' id={id}>
 
-   
+
 
 
 
@@ -88,34 +88,34 @@ function Section({ subtitle, video, gradiente, id, children }) {
           </div> */}
 
     <div className='relative px-5 py-12 w-full min-h-[50vh] mflex flex-col z-50 lg:flex-row justify-around items-center  bg-gradient-to-tr from-[#000000c5] via-[#3259c5a9] to-[#2A52BE] '>
-        <div>
-          <Subtitle><h3 className='text-[30px] text-[white] text-center font-medium  py-10'>Transporte terrestre</h3></Subtitle>
-          <ScrollAnimation animateIn='bounceInRight'
-            animateOut='bounceOutLeft'
-            initiallyVisible={true}
-          >
-            <p className=' text-[16px] text-[white]'>
-              Nuestro servicio de transporte terrestre nacional e internacional se caracteriza por ser adaptable de acuerdo a su negocio, realizamos transportes locales, interdepartamentales e internacionales en las modalidades ftl (full-truckload) y ltl (less-than-truckload), para carga general, refrigerada, maquinarias y mercancías peligrosas.
-            </p>
-          </ScrollAnimation>
-        </div>
-        <div className='w-full text-[white] grid grid-cols-2 gap-5 py-12'>
+      <div>
+        <Subtitle><h3 className='text-[30px] text-[white] text-center font-medium  py-10'>Transporte terrestre</h3></Subtitle>
+        <ScrollAnimation animateIn='bounceInRight'
+          animateOut='bounceOutLeft'
+          initiallyVisible={true}
+        >
+          <p className=' text-[16px] text-[white]'>
+            Nuestro servicio de transporte terrestre nacional e internacional se caracteriza por ser adaptable de acuerdo a su negocio, realizamos transportes locales, interdepartamentales e internacionales en las modalidades ftl (full-truckload) y ltl (less-than-truckload), para carga general, refrigerada, maquinarias y mercancías peligrosas.
+          </p>
+        </ScrollAnimation>
+      </div>
+      <div className='w-full text-[white] grid grid-cols-2 gap-5 py-12'>
 
-          <Item e1={'1 a 2tn'} e2={'Camionetas'} />
-          <Item e1={'hasta 20tn'} e2={'Camiones'} />
-          <Item e1={'La paz, Bolivia'} e2={'SEDE MUNDIAL'} />
-          <Item e1={'100 000 $'} e2={'FACTURACIÓN EN DOLARES EN 2023'} />
-          <Item e1={'2017'} e2={'AÑO DE FUNDACIÓN'} />
-
-        </div>
+        <Item e1={'1 a 2tn'} e2={'Camionetas'} />
+        <Item e1={'hasta 20tn'} e2={'Camiones'} />
+        <Item e1={'La paz, Bolivia'} e2={'SEDE MUNDIAL'} />
+        <Item e1={'100 000 $'} e2={'FACTURACIÓN EN DOLARES EN 2023'} />
+        <Item e1={'2017'} e2={'AÑO DE FUNDACIÓN'} />
 
       </div>
+
+    </div>
     <div className='relative min-h-screen w-full flex flex-col lg:flex-wrap  lg:flex-row lg:justify-center justify-top z-20 '>
       {/* <Subtitle> <h2 className="w-[100vw] text-[white] text-center text-[25px] font-medium">{subtitle}</h2></Subtitle> */}
 
       <video className='absolute bottom-0  w-full h-full min-h-[100vh] object-cover z-10' autoPlay loop muted>
-      <source src={video} type="video/mp4" />
-    </video>
+        <source src={video} type="video/mp4" />
+      </video>
 
       {/* <div className='relative px-5 py-12 w-full flex flex-col  lg:flex-row justify-around items-center  bg-gradient-to-tr from-[#2A52BE] via-[#3259c5] to-[#2A52BE]'>
         <div> */}
@@ -123,7 +123,7 @@ function Section({ subtitle, video, gradiente, id, children }) {
           <div> */}
       {/* <div className='relative px-5 py-12 w-full flex flex-col  lg:flex-row justify-around items-center '>
           <div> */}
-  
+
 
 
 
@@ -145,6 +145,7 @@ function Section({ subtitle, video, gradiente, id, children }) {
 export default function Home() {
   const { user, introVideo, userDB, setUserProfile, setUserSuccess, success, setUserData, postsIMG, setUserPostsIMG } = useUser()
 
+  const [element, setElement] = useState('TRACKING')
   const router = useRouter()
   const AutoplaySlider = withAutoplay(AwesomeSlider);
 
@@ -220,19 +221,22 @@ export default function Home() {
 
             <div className='bg-[#ffffffc7] p-5'>
               <ul class="flex border-b border-[blue] ">
-                <li class="-mb-px mr-1 bg-[#F7BE38] border border-[blue] border-b-transparent">
-                  <a class=" inline-block border-l border-t border-r rounded-t py-2 px-4 text-blue-700 font-semibold" href="#">Tracking</a>
+                <li class={`-mb-px mr-1 ${element === 'TRACKING' && 'bg-[#F7BE38] border border-[blue] border-b-transparent'}`} onClick={() => setElement('TRACKING')}>
+                  <a class=" inline-block rounded-t py-2 px-2 text-blue-700 font-semibold" href="#">Tracking</a>
                 </li>
-                <li class="mr-1">
-                  <a class=" inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold" href="#"> Cotizador FCL</a>
+                <li class={`-mb-px mr-1 ${element === 'FCL' && 'bg-[#F7BE38] border border-[blue] border-b-transparent'}`} onClick={() => setElement('FCL')}>
+                  <a class=" inline-block rounded-t py-2 px-2 text-blue-500 font-semibold" href="#">Cotizador FCL</a>
                 </li>
-                <li class="mr-1">
-                  <a class=" inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold" href="#">Cotizador FTL</a>
+                <li class={`-mb-px mr-1 ${element === 'FTL' && 'bg-[#F7BE38] border border-[blue] border-b-transparent'}`} onClick={() => setElement('FTL')}>
+                  <a class=" inline-block rounded-t py-2 px-2 text-blue-500  font-semibold" href="#">Cotizador FTL</a>
                 </li>
               </ul>
 
 
-              <form class="max-w-md w-full flex  mx-auto pt-5">
+              {element === 'TRACKING' && <form class="max-w-md w-full flex  mx-auto pt-5">
+
+
+
                 <div class="flex w-full ">
                   <label for="location-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Your Email</label>
                   <div class="relative w-full">
@@ -271,7 +275,24 @@ export default function Home() {
                 </span>
 
 
-              </form>
+              </form>}
+
+
+              {element === 'FCL' &&
+                <form class="max-w-md mx-auto bg-white p-5">
+                  <div class="relative z-0 w-full mb-5 group">
+                    <input type="text" name="floating_email" id="floating_email" class="block p-3 w-full h-full z-20 text-sm text-gray-900   rounded-[5px] focus:ring-blue-500 focus:border-blue-500     block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+                    <label for="floating_email" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Origen</label>
+                  </div>
+                  <div class="relative z-0 w-full mb-5 group">
+                    <input type="text" name="floating_password" id="floating_password" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+                    <label for="floating_password" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Destino</label>
+                  </div>
+                  
+
+                  <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+                </form>}
+
 
 
 

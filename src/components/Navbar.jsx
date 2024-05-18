@@ -119,7 +119,7 @@ export default function BottomNavigation({ rol }) {
                 </div>
             </div>
         </nav>
-        <div className={`fixed top-0 w-screen lg:w-screen lg:border-r-8 overflow-auto bg-[#2A52BE] h-screen transition-all	z-50  py-[20px] ${nav ? 'left-0  ' : 'left-[-100vw] '} z-50`} >
+        <div className={`fixed top-0 w-screen lg:w-screen lg:border-r-8 overflow-auto   bg-gradient-to-tr from-[#00195c] via-[#274492] to-[#00195c] h-screen transition-all	z-50  py-[20px] ${nav ? 'left-0  ' : 'left-[-100vw] '} z-50`} >
             <div class="py-4 overflow-y-auto absolute top-[20px] right-[20px]">
                 <div className="w-[100%] text-[16px] flex justify-between items-center">
                     <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" onClick={() => setNav(false)}>
