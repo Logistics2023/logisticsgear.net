@@ -39,7 +39,7 @@ export default function BottomNavigation({ rol }) {
         return () => window.removeEventListener('scroll', controlNavbar);
     }, [lastScrollY, show]);
     return <>
-        <nav class={`fixed  w-screen  lg:border-gray-200 transition-all  z-40  ${show ? 'top-0' : 'top-[-100px]'}`}>
+        <nav class={`fixed  w-screen  lg:border-gray-200 transition-all z-40  ${show ? 'top-0' : 'top-[-100px]'}`}>
             <div class="w-screen flex flex-wrap items-center justify-between lg:border-b-[2px] lg:border-gray-50 mx-auto py-4 px-4 lg:px-8">
                 <Link href="/" class="flex items-center">
                     <img src="/logo.svg" class="h-[50px] mr-3" alt="Flowbite Logo" />
@@ -119,7 +119,7 @@ export default function BottomNavigation({ rol }) {
                 </div>
             </div>
         </nav>
-        <div className={`fixed top-0 w-screen lg:w-screen lg:border-r-8 overflow-auto   bg-gradient-to-tr from-[#00195c] via-[#274492] to-[#00195c] h-screen transition-all	z-50  py-[20px] ${nav ? 'left-0  ' : 'left-[-100vw] '} z-50`} >
+        <div className={`fixed top-0 w-screen lg:w-screen lg:border-r-8 overflow-auto  bg-gradient-to-tr from-[#00195c] via-[#274492] to-[#00195c] h-screen transition-all	z-50  py-[20px] ${nav ? 'left-0  ' : 'left-[-100vw] '} z-50`} >
             <div class="py-4 overflow-y-auto absolute top-[20px] right-[20px]">
                 <div className="w-[100%] text-[16px] flex justify-between items-center">
                     <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" onClick={() => setNav(false)}>
@@ -129,7 +129,7 @@ export default function BottomNavigation({ rol }) {
                     </button>
                 </div>
             </div>
-            <div>
+            <div className=''>
                 <h3 className="text-white text-[16px] font-bold pt-5 pl-5">NOSOTROS</h3>
                 <div className='grid grid-cols-2 gap-[20px] p-[20px]'>
                     <Link href='/' className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[10px]'>
@@ -179,7 +179,7 @@ export default function BottomNavigation({ rol }) {
                 </div>
                 
                 <h3 className="text-white text-[16px] font-bold pt-5 pl-5">HERRAMIENTAS</h3>
-                <div className='grid grid-cols-2 gap-[20px] p-[20px]'>
+                <div className='relative grid grid-cols-2 gap-[20px] p-[20px] '>
                     <Link href='/' className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[10px]'>
                         <img src="/icons/TIPOS DE CONTENEDORES.png" className="w-[40px]" alt="" />
                         <span className="text-[12px] font-bold text-center">Contenedores maritimos</span>
@@ -200,6 +200,9 @@ export default function BottomNavigation({ rol }) {
                         <img src="/icons/DIRECCION.png" className="w-[40px]" alt="" />
                         <span className="text-[12px] font-bold text-center">Tracking</span>
                     </Link>
+                </div>
+                <div className='relative grid grid-cols-2 gap-[20px] p-[20px] '>
+                
                 </div>
             </div>
         </div>

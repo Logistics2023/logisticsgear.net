@@ -19,7 +19,8 @@ import "animate.css/animate.compat.css"
 
 import 'react-awesome-slider/dist/styles.css';
 
-
+import QRscanner from '@/components/QRscanner'
+import { QRreaderUtils } from '@/utils/QRreader'
 
 const db = [
   {
@@ -49,8 +50,8 @@ function Componente({ title, image, paragraph }) {
         {paragraph}
       </p>
       <div className="relative flex justify-end w-[100%]">
-        <button className="inline-block bg-[#ffb834] px-10 text-[16px] text-center font-medium px-2.5 py-2 m-1  
-        border border-gray-400 cursor-pointer rounded-full">Saber mas</button>
+        <button className="inline-block bg-[#ffb834] px-3 text-[12px] border text-center font-medium py-2 m-1  
+         cursor-pointer rounded-[5px]">Saber mas</button>
       </div>
     </div>
   </div>
@@ -89,7 +90,7 @@ function Section({ subtitle, video, gradiente, id, children }) {
 
     <div className='relative px-5 py-12 w-full min-h-[50vh] mflex flex-col z-50 lg:flex-row justify-around items-center  bg-gradient-to-tr from-[#000000c5] via-[#3259c5a9] to-[#2A52BE] '>
       <div>
-        <Subtitle><h3 className='text-[30px] text-[white] text-center font-medium  py-10'>Transporte terrestre</h3></Subtitle>
+        <Subtitle><h3 className='text-[30px] text-[white] text-center font-medium  py-10'>{subtitle}</h3></Subtitle>
         <ScrollAnimation animateIn='bounceInRight'
           animateOut='bounceOutLeft'
           initiallyVisible={true}
@@ -108,7 +109,24 @@ function Section({ subtitle, video, gradiente, id, children }) {
         <Item e1={'2017'} e2={'AÑO DE FUNDACIÓN'} />
 
       </div>
+      <div className='grid grid-cols-2 gap-2 w-full '>
+        <span></span>
+        {/* <button type="button" class="w-full  border-[2px]  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center ">
+  Contactar
+  <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+  </svg>
+</button> */}
 
+        <button type="button" class="w-full border-[2px]  text-gray-900 bg-[#F7BE38] hover:bg-[#F7BE38]/90 focus:ring-4 focus:outline-none focus:ring-[#F7BE38]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center ">
+          Orden de servicio
+          <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+          </svg>
+        </button>
+
+
+      </div>
     </div>
     <div className='relative min-h-screen w-full flex flex-col lg:flex-wrap  lg:flex-row lg:justify-center justify-top z-20 '>
       {/* <Subtitle> <h2 className="w-[100vw] text-[white] text-center text-[25px] font-medium">{subtitle}</h2></Subtitle> */}
@@ -143,7 +161,7 @@ function Section({ subtitle, video, gradiente, id, children }) {
 
 
 export default function Home() {
-  const { user, introVideo, userDB, setUserProfile, setUserSuccess, success, setUserData, postsIMG, setUserPostsIMG } = useUser()
+  const { user, introVideo, userDB, setUserProfile, setUserSuccess, success, setUserData, postsIMG, setUserPostsIMG, nav } = useUser()
 
   const [element, setElement] = useState('TRACKING')
   const router = useRouter()
@@ -157,9 +175,13 @@ export default function Home() {
     email.length !== 0 && password.length !== 0 ? signInWithEmail(email, password, setUserSuccess) : setUserSuccess('Complete')
   }
 
+  const redirectHandlerWindow = (ref) => {
+    window.open(ref, '_blank')
+  }
 
-
-
+  function HandlerOnChange(e) {
+    QRreaderUtils(e, setFilterQR,)
+  }
 
 
   useEffect(() => {
@@ -168,7 +190,7 @@ export default function Home() {
   }, [user])
 
   return (
-    <main className="h-screen w-screen ">
+    <main className={`h-screen w-screen `}>
 
 
 
@@ -198,7 +220,7 @@ export default function Home() {
             <br />
             <div className='grid grid-cols-2 gap-2 w-full '>
 
-              <button type="button" class="w-full  border-[2px]  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center ">
+              <button type="button" onClick={() => redirectHandlerWindow(`https://api.whatsapp.com/send?phone=+59176586948&text=hola%20Logistics%20Gear`)} class="w-full  border-[2px]  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center ">
                 Contactar
                 <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
@@ -211,8 +233,6 @@ export default function Home() {
                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
                 </svg>
               </button>
-
-
             </div>
             <br />
 
@@ -254,8 +274,7 @@ export default function Home() {
 
                 </div>
 
-
-                <span className='bg-[#F7BE38] border-[2px] border-[#0000002d] p-2 rounded-[5px]'>
+                <label htmlFor="qr" className='bg-[#F7BE38] border-[2px] border-[#0000002d] p-2 rounded-[5px]'>
                   <svg width="20" height="20" viewBox="0 0 323 323" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M138.71 0.669922H12.4399C9.25734 0.669922 6.20509 1.93419 3.95465 4.18463C1.70421 6.43507 0.439941 9.48732 0.439941 12.6699V138.93C0.439941 142.112 1.70421 145.165 3.95465 147.415C6.20509 149.666 9.25734 150.93 12.4399 150.93H138.71C141.893 150.93 144.945 149.666 147.195 147.415C149.446 145.165 150.71 142.112 150.71 138.93V12.6699C150.71 9.48732 149.446 6.43507 147.195 4.18463C144.945 1.93419 141.893 0.669922 138.71 0.669922ZM129.24 43.5999V129.47H21.9099V22.1299H129.24V43.5999Z" fill="black" />
                     <path d="M95.7799 43.6001H55.3799C52.1973 43.6001 49.145 44.8644 46.8946 47.1148C44.6442 49.3652 43.3799 52.4175 43.3799 55.6001V96.0001C43.3799 99.1827 44.6442 102.235 46.8946 104.485C49.145 106.736 52.1973 108 55.3799 108H95.7799C98.9625 108 102.015 106.736 104.265 104.485C106.516 102.235 107.78 99.1827 107.78 96.0001V55.6001C107.78 52.4175 106.516 49.3652 104.265 47.1148C102.015 44.8644 98.9625 43.6001 95.7799 43.6001Z" fill="black" />
@@ -272,30 +291,45 @@ export default function Home() {
                     <path d="M95.7799 215.33H55.3799C52.1973 215.33 49.145 216.594 46.8946 218.845C44.6442 221.095 43.3799 224.147 43.3799 227.33V267.73C43.3799 270.913 44.6442 273.965 46.8946 276.215C49.145 278.466 52.1973 279.73 55.3799 279.73H95.7799C98.9625 279.73 102.015 278.466 104.265 276.215C106.516 273.965 107.78 270.913 107.78 267.73V227.33C107.78 224.147 106.516 221.095 104.265 218.845C102.015 216.594 98.9625 215.33 95.7799 215.33Z" fill="black" />
                     <path d="M138.71 172.4H12.4399C9.25734 172.4 6.20509 173.664 3.95465 175.915C1.70421 178.165 0.439941 181.217 0.439941 184.4V310.67C0.439941 313.852 1.70421 316.905 3.95465 319.155C6.20509 321.406 9.25734 322.67 12.4399 322.67H138.71C141.893 322.67 144.945 321.406 147.195 319.155C149.446 316.905 150.71 313.852 150.71 310.67V184.4C150.71 181.217 149.446 178.165 147.195 175.915C144.945 173.664 141.893 172.4 138.71 172.4ZM129.24 215.33V301.2H21.9099V193.87H129.24V215.33Z" fill="black" />
                   </svg>
-                </span>
+                </label>
+                <input id="qr" type="file" className='hidden' onChange={HandlerOnChange} accept="image/* " />
 
 
               </form>}
 
 
               {element === 'FCL' &&
-                <form class="max-w-md mx-auto bg-white p-5">
-                  <div class="relative z-0 w-full mb-5 group">
-                    <input type="text" name="floating_email" id="floating_email" class="block p-3 w-full h-full z-20 text-sm text-gray-900   rounded-[5px] focus:ring-blue-500 focus:border-blue-500     block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-                    <label for="floating_email" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Origen</label>
+                <form class="max-w-md py-5">
+                  <div class="relative z-0 w-full mb-5 group  ">
+                    <input type="search" id="location-search" class="block p-3 w-full h-full z-20 text-sm text-gray-900   rounded-[5px] focus:ring-blue-500 focus:border-blue-500" placeholder="Origen" required />
+                    {/* <label for="floating_email" class="peer-focus:font-medium z-30 absolute text-sm text-gray-500 duration-300 transform -translate-y-10 scale-75 top-3  origin-[0px] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Origen</label> */}
                   </div>
                   <div class="relative z-0 w-full mb-5 group">
-                    <input type="text" name="floating_password" id="floating_password" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-                    <label for="floating_password" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Destino</label>
+                    <input type="search" id="location-search" class="block p-3 w-full h-full z-20 text-sm text-gray-900   rounded-[5px] focus:ring-blue-500 focus:border-blue-500" placeholder="Destino" required />
+                    {/* <label for="floating_password" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Destino</label> */}
                   </div>
-                  
 
-                  <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+
+                  <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full  px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Continuar</button>
                 </form>}
 
 
 
 
+              {element === 'FTL' &&
+                <form class="max-w-md py-5">
+                  <div class="relative z-0 w-full mb-5 group  ">
+                    <input type="search" id="location-search" class="block p-3 w-full h-full z-20 text-sm text-gray-900   rounded-[5px] focus:ring-blue-500 focus:border-blue-500" placeholder="Origen" required />
+                    {/* <label for="floating_email" class="peer-focus:font-medium z-30 absolute text-sm text-gray-500 duration-300 transform -translate-y-10 scale-75 top-3  origin-[0px] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Origen</label> */}
+                  </div>
+                  <div class="relative z-0 w-full mb-5 group">
+                    <input type="search" id="location-search" class="block p-3 w-full h-full z-20 text-sm text-gray-900   rounded-[5px] focus:ring-blue-500 focus:border-blue-500" placeholder="Destino" required />
+                    {/* <label for="floating_password" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Destino</label> */}
+                  </div>
+
+
+                  <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full  px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Continuar</button>
+                </form>}
 
 
 
@@ -309,22 +343,6 @@ export default function Home() {
                 animateIn='tada'
                 initiallyVisible={true}>
                 <Tag theme='Primary'><a href="#terrestre">Transporte Terrestre</a> </Tag>
-              </ScrollAnimation>
-              <ScrollAnimation animateIn='tada'
-                initiallyVisible={true}>
-                <Tag theme='Primary'><a href="#maritimo">Transporte Maritimo</a> </Tag>
-              </ScrollAnimation>
-              <ScrollAnimation animateIn='tada'
-                initiallyVisible={true}>
-                <Tag theme='Primary'><a href="#aereo">Transporte Aereo</a> </Tag>
-              </ScrollAnimation>
-              <ScrollAnimation animateIn='tada'
-                initiallyVisible={true}>
-                <Tag theme='Primary'><a href="#terrestre">Despacho Aduanero</a> </Tag>
-              </ScrollAnimation>
-              <ScrollAnimation animateIn='tada'
-                initiallyVisible={true}>
-                <Tag theme='Primary'><a href="#terrestre">Carga Proyecto</a> </Tag>
               </ScrollAnimation>
             </div> */}
             <a href="tel:76586948">

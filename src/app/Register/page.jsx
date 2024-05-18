@@ -74,10 +74,7 @@ function Home() {
 
 
                 <form className={`space-y-6 lg:space-y-3  rounded-[30px] w-[100%] max-w-[400px] p-5 h-auto px-5 py-10 lg:p-10 z-10 lg:scale-110`} onSubmit={registerHandler} >
-                    <div className='w-full text-center flex justify-center'>
-                        <Image src="/logo.svg" width="200" height="200" alt="User" />
-                    </div>
-                    <br />
+               
                     <div className='space-y-4 bg-[#00061860] p-5  rounded-[10px] lg:space-y-3'>
                         <h5 className="text-[18px] text-center text-white font-medium">Registrate</h5>
                         <br />                        <div>
