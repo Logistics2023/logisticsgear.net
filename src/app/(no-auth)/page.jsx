@@ -177,7 +177,7 @@ export default function Home() {
 
 
         <video className='fixed bottom-0 w-full h-[100vh] pb-[10px] object-cover object-bottom ' autoPlay loop muted>
-          <source src={"/vista1-comp.mp4"} type="video/mp4" />
+          <source src={"/container(720p).mp4"} type="video/mp4" />
         </video>
 
         <div className='absolute top-0  w-full h-[100vh] object-cover z-10 bg-[#1969ff67]'></div>
