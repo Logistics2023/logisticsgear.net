@@ -80,15 +80,15 @@ export default function BottomNavigation({ rol }) {
                         <li onClick={() => handlerNavItem('Servicios')}>
                             <a href="#" className={`block py-2 pl-3 pr-4 text-[14px] rounded   md:border-0  md:p-0   transition-all hover:text-[#F1BA06] cursor-pointer z-30 ${navItem === 'Servicios' ? 'text-[#F1BA06]' : 'text-white'}`}>Servicios</a>
                             <div className={`absolute top-[90px] right-[20px] w-[350px]  bg-blue-950  grid grid-cols-2 gap-[20px]  rounded-2xl z-20  overflow-hidden ${navItem === 'Servicios' ? 'h-auto p-[20px]' : 'h-0 overflow-hidden'}`}>
-                                <Link href='/' className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[20px]'>
+                                <Link href='#terrestre' className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[20px]'>
                                     <img src="/icons/TERRESTRE.png" className="w-[50px]" alt="" />
                                     <span className="text-[12px] font-bold text-center">Transporte Terrestre</span>
                                 </Link>
-                                <Link href='/' className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[20px]'>
+                                <Link href='#maritimo' className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[20px]'>
                                     <img src="/icons/MARITIMO.png" className="w-[50px]" alt="" />
                                     <span className="text-[12px] font-bold text-center">Transporte Maritimo</span>
                                 </Link>
-                                <Link href='/' className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[20px]'>
+                                <Link href='#aereo' className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[20px]'>
                                     <img src="/icons/AEREO.png" className="w-[50px]" alt="" />
                                     <span className="text-[12px] font-bold text-center">Transporte Aereo</span>
                                 </Link>
@@ -143,15 +143,15 @@ export default function BottomNavigation({ rol }) {
                 </div>
                 <h3 className="text-white text-[16px] font-bold p-5">NUESTROS SERVICIOS</h3>
                 <div className='grid grid-cols-2 gap-[20px] p-[20px]'>
-                    <Link href='/' className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[20px]'>
+                    <Link href='#terrestre' className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[20px]'>
                         <img src="/icons/TERRESTRE.png" className="w-[50px]" alt="" />
                         <span className="text-[12px] font-bold text-center">Transporte Terrestre</span>
                     </Link>
-                    <Link href='/' className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[20px]'>
+                    <Link href='#maritimo' className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[20px]'>
                         <img src="/icons/MARITIMO.png" className="w-[50px]" alt="" />
                         <span className="text-[12px] font-bold text-center">Transporte Maritimo</span>
                     </Link>
-                    <Link href='/' className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[20px]'>
+                    <Link href='#aereo' className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[20px]'>
                         <img src="/icons/AEREO.png" className="w-[50px]" alt="" />
                         <span className="text-[12px] font-bold text-center">Transporte Aereo</span>
                     </Link>

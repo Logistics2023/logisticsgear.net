@@ -44,14 +44,28 @@ export default function Home() {
         backgroundAttachment: 'fixed',
         backgroundSize: 'cover'
       }}>
+
+
+
+
+
       <div className='w-screen h-screen bg-gradient-to-t from-[#00061860] to-[#000618d1] flex flex-col justify-center items-center p-5 z-[50]'>
-        <form className={`space-y-6 lg:space-y-3 w-[100%] rounded-[30px] max-w-[350px] `} onSubmit={signUpHandler} >
+
+      <video className='absolute top-0  w-full min-h-[100vh] object-cover z-10' autoPlay loop muted>
+      <source src='underwater.mp4' type="video/mp4" />
+    </video> 
+        <img src="/truck.png" className='absolute  w-screen h-screen bg-[#01A7EB] object-cover lg:hidden' alt="" />
+     
+
+
+        <form className={`space-y-6 lg:space-y-3 w-[100%] rounded-[30px] max-w-[350px] z-10 lg:scale-110`} onSubmit={signUpHandler} >
           <div className='w-full text-center flex justify-center'>
           <img src="/logo.svg" className='w-[300px] z-[30]' alt="User" />
           </div>
           <br />
           <h5 className="text-[22px] font-bold text-center text-white">Registrate</h5>
           <br />
+          <div className=' bg-[#00061860] p-5  rounded-[10px] lg:space-y-3'>
           <div>
             <label htmlFor="email" className="block mb-2 text-[16px] text-left font-medium text-[#F1BA06]">Email</label>
             <Input type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-[16px] rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="name@company.com" required />
@@ -65,6 +79,7 @@ export default function Home() {
           </div>
           <Button type="submit" theme="Primary">Continuar</Button>
           <div className="text-[14px] text-center font-medium text-white">Ya tienes una cuenta? <Link href="/Login" className="text-gray-100 hover:underline">Inicia Sessión</Link >
+          </div>
           </div>
         </form>
       </div>

@@ -5,11 +5,11 @@ const TextMaquina = () => {
     <TypeAnimation
       sequence={[
         // Same substring at the start will only be typed out once, initially
-        'Especialistas en servicios TERRESTRES',
+        'Especialistas en CARGA PROYECTO',
         1000, // wait 1s before replacing "Mice" with "Hamsters"
-        'Especialistas en servicios MARITIMOS',
+        'Especialistas en EXPORTACIONES',
         1000,
-        'Especialistas en servicios AEREOS',
+        'Especialistas en FARMACOS',
         1000,
       ]}
       wrapper="span"
