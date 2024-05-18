@@ -12,10 +12,10 @@ export default function ({content}) {
 			key={index}
 			style={{ background: `url('${item.image}') no-repeat center center` }}
 		>
-			<div className="center">
+			<div  className="center">
 				<h1>{item.title}</h1>
 				<p>{item.description}</p>
-				<button className='bg-yellow-400'>{item.button}</button>
+				<button  className='bg-yellow-400'>{item.button}</button>
 			</div>
 		</div>
 	))}

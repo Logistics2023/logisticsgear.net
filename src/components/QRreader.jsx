@@ -32,7 +32,7 @@ const Test = () => {
     console.error(err);
   };
   return (
-    <div className="h-[200px]">
+    <div  className="h-[200px]">
       <h1>Hello CodeSandbox</h1>
       <h2>
         Last Scan:
@@ -52,7 +52,7 @@ const Test = () => {
             <option value={"environment"}>Back Camera</option>
             <option value={"user"}>Front Camera</option>
           </select>
-          <div className=" relative h-[200px]">
+          <div  className=" relative h-[200px]">
             <QrReader
               facingMode={selected}
               delay={10}

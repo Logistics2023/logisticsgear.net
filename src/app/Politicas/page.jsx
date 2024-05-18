@@ -51,12 +51,12 @@ function Home() {
 
     console.log(item)
     return (
-      <main className="relative left-0 right-0 mx-auto p-5 mt-12 max-w-[900px] flex flex-col items-center lg:flex-row lg:justify-between lg:items-center pt-[20px] pb-[20px] bg-white rounded-[5px]">
-            <div className='flex flex-wrap justify-center lg:justify-start md:max-w-[400px] '>
-                <img src="/logo.png" className='lg:w-[90vw] lg:max-w-[400px] max-h-[200px] lg:max-h-[10000px] lg:px-10' alt="" />
+      <main  className="relative left-0 right-0 mx-auto p-5 mt-12 max-w-[900px] flex flex-col items-center lg:flex-row lg:justify-between lg:items-center pt-[20px] pb-[20px] bg-white rounded-[5px]">
+            <div  className='flex flex-wrap justify-center lg:justify-start md:max-w-[400px] '>
+                <img src="/logo.png"  className='lg:w-[90vw] lg:max-w-[400px] max-h-[200px] lg:max-h-[10000px] lg:px-10' alt="" />
             </div>
             <br />
-            <div className='lg:pl-12 lg:border-l bg-gray-50 p-5 lg:bg-white lg:p-0'>
+            <div  className='lg:pl-12 lg:border-l bg-gray-50 p-5 lg:bg-white lg:p-0'>
                 <Subtitle>Politicas de servicio</Subtitle>
                 <p >
 

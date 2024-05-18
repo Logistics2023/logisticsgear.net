@@ -66,6 +66,7 @@ const dbRef = ref(getDatabase());
 function getData(setUserData) {
   onValue(ref(db, '/'), (snapshot) => {
     if (snapshot.exists()) {
+      console.log(setUserData)
           setUserData(snapshot.val());
         }
   });

@@ -11,7 +11,7 @@ export default function Button({ styled, children }) {
 
             }}
       >
-        <div className="p-10" >
+        <div  className="p-10" >
             {children}
         </div>
             

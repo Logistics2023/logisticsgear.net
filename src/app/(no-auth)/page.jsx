@@ -42,15 +42,15 @@ const db = [
 
 
 function Componente({ title, image, paragraph }) {
-  return <div className='bg-[#ffffffcb] my-5 flex  lg:max-w-[500px] lg:text-[18px] lg:mx-5 lg:flex lg:flex-col lg:justify-center lg:items-center rounded-[15px]'>
-    <img src={image} className=" w-[150px] lg:max-w-[200px] object-contain p-5" alt="" />
-    <div className="w-full bg-[#2e62d1ce] p-5 py-5 rounded-b-[15px]">
-      <h4 className="w-full text-left font-medium border-b-[3px] text-white pb-5 pl-0 ml-0 border-[#ffffff] p-5">{title}</h4>
-      <p className="text-white " >
+  return <div  className='bg-[#ffffffcb] my-5 flex  lg:max-w-[500px] lg:text-[18px] lg:mx-5 lg:flex lg:flex-col lg:justify-center lg:items-center rounded-[15px]'>
+    <img src={image}  className=" w-[150px] lg:max-w-[200px] object-contain p-5" alt="" />
+    <div  className="w-full bg-[#2e62d1ce] p-5 py-5 rounded-b-[15px]">
+      <h4  className="w-full text-left font-medium border-b-[3px] text-white pb-5 pl-0 ml-0 border-[#ffffff] p-5">{title}</h4>
+      <p  className="text-white " >
         {paragraph}
       </p>
-      <div className="relative flex justify-end w-[100%]">
-        <button className="inline-block bg-[#ffb834] px-3 text-[12px] border text-center font-medium py-2 m-1  
+      <div  className="relative flex justify-end w-[100%]">
+        <button  className="inline-block bg-[#ffb834] px-3 text-[12px] border text-center font-medium py-2 m-1  
          cursor-pointer rounded-[5px]">Saber mas</button>
       </div>
     </div>
@@ -65,42 +65,42 @@ function Item({ e1, e2 }) {
 
     }}
     initiallyVisible={true}>
-    <div className='flex flex-col justify-center items-center'>
-      <span className='text-[30px] font-medium'>{e1}</span>
-      <span className='text-center'>{e2}</span>
+    <div  className='flex flex-col justify-center items-center'>
+      <span  className='text-[30px] font-medium'>{e1}</span>
+      <span  className='text-center'>{e2}</span>
     </div>
   </ScrollAnimation>
 }
 
 function Section({ subtitle, video, gradiente, id, children }) {
-  return <section className='relative w-full bg-[#4f8cc5] overflow-x-hidden overflow-hidden' id={id}>
+  return <section  className='relative w-full bg-[#4f8cc5] overflow-x-hidden overflow-hidden' id={id}>
 
 
 
 
 
 
-    {/* <div className={`absolute top-0  w-full  object-cover z-10 ${gradiente}`} > */}
+    {/* <div  className={`absolute top-0  w-full  object-cover z-10 ${gradiente}`} > */}
 
-    {/* <div className='absolute px-5 py-12 w-full min-h-[100vh]  bg-gradient-to-tr from-[#000000c5] via-[#3259c5a9] to-[#2A52BE]'>
+    {/* <div  className='absolute px-5 py-12 w-full min-h-[100vh]  bg-gradient-to-tr from-[#000000c5] via-[#3259c5a9] to-[#2A52BE]'>
           */}
 
-    {/* <div className='absolute px-5 py-12 w-full min-h-screen flex flex-col z-30 lg:flex-row justify-around items-center  bg-gradient-to-tr from-[#000000c5] via-[#3259c5a9] to-[#2A52BE]'>
+    {/* <div  className='absolute px-5 py-12 w-full min-h-screen flex flex-col z-30 lg:flex-row justify-around items-center  bg-gradient-to-tr from-[#000000c5] via-[#3259c5a9] to-[#2A52BE]'>
           </div> */}
 
-    <div className='relative px-5 py-12 w-full min-h-[50vh] mflex flex-col z-50 lg:flex-row justify-around items-center  bg-gradient-to-tr from-[#000000c5] via-[#3259c5a9] to-[#2A52BE] '>
+    <div  className='relative px-5 py-12 w-full min-h-[50vh] mflex flex-col z-50 lg:flex-row justify-around items-center  bg-gradient-to-tr from-[#000000c5] via-[#3259c5a9] to-[#2A52BE] '>
       <div>
-        <Subtitle><h3 className='text-[30px] text-[white] text-center font-medium  py-10'>{subtitle}</h3></Subtitle>
+        <Subtitle><h3  className='text-[30px] text-[white] text-center font-medium  py-10'>{subtitle}</h3></Subtitle>
         <ScrollAnimation animateIn='bounceInRight'
           animateOut='bounceOutLeft'
           initiallyVisible={true}
         >
-          <p className=' text-[16px] text-[white]'>
+          <p  className=' text-[16px] text-[white]'>
             Nuestro servicio de transporte terrestre nacional e internacional se caracteriza por ser adaptable de acuerdo a su negocio, realizamos transportes locales, interdepartamentales e internacionales en las modalidades ftl (full-truckload) y ltl (less-than-truckload), para carga general, refrigerada, maquinarias y mercancías peligrosas.
           </p>
         </ScrollAnimation>
       </div>
-      <div className='w-full text-[white] grid grid-cols-2 gap-5 py-12'>
+      <div  className='w-full text-[white] grid grid-cols-2 gap-5 py-12'>
 
         <Item e1={'1 a 2tn'} e2={'Camionetas'} />
         <Item e1={'hasta 20tn'} e2={'Camiones'} />
@@ -109,44 +109,44 @@ function Section({ subtitle, video, gradiente, id, children }) {
         <Item e1={'2017'} e2={'AÑO DE FUNDACIÓN'} />
 
       </div>
-      <div className='grid grid-cols-2 gap-2 w-full '>
+      <div  className='grid grid-cols-2 gap-2 w-full '>
         <span></span>
         {/* <button type="button" class="w-full  border-[2px]  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center ">
   Contactar
   <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
   </svg>
 </button> */}
 
         <button type="button" class="w-full border-[2px]  text-gray-900 bg-[#F7BE38] hover:bg-[#F7BE38]/90 focus:ring-4 focus:outline-none focus:ring-[#F7BE38]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center ">
           Orden de servicio
           <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
           </svg>
         </button>
 
 
       </div>
     </div>
-    <div className='relative min-h-screen w-full flex flex-col lg:flex-wrap  lg:flex-row lg:justify-center justify-top z-20 '>
-      {/* <Subtitle> <h2 className="w-[100vw] text-[white] text-center text-[25px] font-medium">{subtitle}</h2></Subtitle> */}
+    <div  className='relative min-h-screen w-full flex flex-col lg:flex-wrap  lg:flex-row lg:justify-center justify-top z-20 '>
+      {/* <Subtitle> <h2  className="w-[100vw] text-[white] text-center text-[25px] font-medium">{subtitle}</h2></Subtitle> */}
 
-      <video className='absolute bottom-0  w-full h-full min-h-[100vh] object-cover z-10' autoPlay loop muted>
+      <video  className='absolute bottom-0  w-full h-full min-h-[100vh] object-cover z-10' autoPlay loop muted>
         <source src={video} type="video/mp4" />
       </video>
 
-      {/* <div className='relative px-5 py-12 w-full flex flex-col  lg:flex-row justify-around items-center  bg-gradient-to-tr from-[#2A52BE] via-[#3259c5] to-[#2A52BE]'>
+      {/* <div  className='relative px-5 py-12 w-full flex flex-col  lg:flex-row justify-around items-center  bg-gradient-to-tr from-[#2A52BE] via-[#3259c5] to-[#2A52BE]'>
         <div> */}
-      {/* <div className='relative px-5 py-12 w-full flex flex-col  lg:flex-row justify-around items-center  bg-gradient-to-tr from-[#2A52BE] via-[#3259c5] to-[#2A52BE]'>
+      {/* <div  className='relative px-5 py-12 w-full flex flex-col  lg:flex-row justify-around items-center  bg-gradient-to-tr from-[#2A52BE] via-[#3259c5] to-[#2A52BE]'>
           <div> */}
-      {/* <div className='relative px-5 py-12 w-full flex flex-col  lg:flex-row justify-around items-center '>
+      {/* <div  className='relative px-5 py-12 w-full flex flex-col  lg:flex-row justify-around items-center '>
           <div> */}
 
 
 
 
       {db.map((i, index) => {
-        return <div className='inline px-5 z-50' key={index}>
+        return <div  className='inline px-5 z-50' key={index}>
           <Componente title={i.title} image={i.image} paragraph={i.paragraph} />
         </div>
       })}
@@ -190,47 +190,47 @@ export default function Home() {
   }, [user])
 
   return (
-    <main className={`h-screen w-screen `}>
+    <main  className={`h-screen w-screen `}>
 
 
 
 
-      <section className=' '>
+      <section  className=' '>
 
 
-        <video className='fixed bottom-0 w-full h-[100vh] pb-[10px] object-cover object-bottom ' autoPlay loop muted>
+        <video  className='fixed bottom-0 w-full h-[100vh] pb-[10px] object-cover object-bottom ' autoPlay loop muted>
           <source src={"/container(720p).mp4"} type="video/mp4" />
         </video>
 
-        <div className='absolute top-0  w-full h-[100vh] object-cover z-10 bg-[#1969ff67]'></div>
+        <div  className='absolute top-0  w-full h-[100vh] object-cover z-10 bg-[#1969ff67]'></div>
 
 
-        <div className='relative min-h-[100vh] py-[50px] w-full lg:pt-10 pb-0 flex flex-col justify-around lg:flex-row items-center  z-20' style={{ background: '-gradient(to bottom, #000000,  #000000c7, #00000050' }}>
-
-
-
-          <img src='/logo-comp.gif' className='inline-block w-[80vw] h-[80vw]  lg:flex justify-center items-end lg:w-[40vw] lg:h-[70vh]  object-cover object-center ' />
+        <div  className='relative min-h-[100vh] py-[50px] w-full lg:pt-10 pb-0 flex flex-col justify-around lg:flex-row items-center  z-20' style={{ background: '-gradient(to bottom, #000000,  #000000c7, #00000050' }}>
 
 
 
-          <div className='lg:scale-150 bg-[#00000083] p-5'>
-            <div className='   font-bold'>
+          <img src='/logo-comp.gif'  className='inline-block w-[80vw] h-[80vw]  lg:flex justify-center items-end lg:w-[40vw] lg:h-[70vh]  object-cover object-center ' />
+
+
+
+          <div  className='lg:scale-150 bg-[#00000083] p-5'>
+            <div  className='   font-bold'>
               <TextMaquina />
             </div>
             <br />
-            <div className='grid grid-cols-2 gap-2 w-full '>
+            <div  className='grid grid-cols-2 gap-2 w-full '>
 
               <button type="button" onClick={() => redirectHandlerWindow(`https://api.whatsapp.com/send?phone=+59176586948&text=hola%20Logistics%20Gear`)} class="w-full  border-[2px]  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center ">
                 Contactar
                 <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                  <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
                 </svg>
               </button>
 
               <button type="button" class="w-full border-[2px]  text-gray-900 bg-[#F7BE38] hover:bg-[#F7BE38]/90 focus:ring-4 focus:outline-none focus:ring-[#F7BE38]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center ">
                 Orden de servicio
                 <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                  <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
                 </svg>
               </button>
             </div>
@@ -239,7 +239,7 @@ export default function Home() {
 
 
 
-            <div className='bg-[#ffffffc7] p-5'>
+            <div  className='bg-[#ffffffc7] p-5'>
               <ul class="flex border-b border-[blue] ">
                 <li class={`-mb-px mr-1 ${element === 'TRACKING' && 'bg-[#F7BE38] border border-[blue] border-b-transparent'}`} onClick={() => setElement('TRACKING')}>
                   <a class=" inline-block rounded-t py-2 px-2 text-blue-700 font-semibold" href="#">Tracking</a>
@@ -263,7 +263,7 @@ export default function Home() {
                     <input type="search" id="location-search" class="block p-3 w-full h-full z-20 text-sm text-gray-900   rounded-[5px] focus:ring-blue-500 focus:border-blue-500" placeholder="Codigo de tracking" required />
                     <button type="submit" class="absolute top-0 end-0 h-full p-2.5 text-sm font-medium text-white bg-blue-700 rounded-r-[5px] border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
                       <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                       </svg>
                       <span class="sr-only">Search</span>
                     </button>
@@ -274,7 +274,7 @@ export default function Home() {
 
                 </div>
 
-                <label htmlFor="qr" className='bg-[#F7BE38] border-[2px] border-[#0000002d] p-2 rounded-[5px]'>
+                <label htmlFor="qr"  className='bg-[#F7BE38] border-[2px] border-[#0000002d] p-2 rounded-[5px]'>
                   <svg width="20" height="20" viewBox="0 0 323 323" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M138.71 0.669922H12.4399C9.25734 0.669922 6.20509 1.93419 3.95465 4.18463C1.70421 6.43507 0.439941 9.48732 0.439941 12.6699V138.93C0.439941 142.112 1.70421 145.165 3.95465 147.415C6.20509 149.666 9.25734 150.93 12.4399 150.93H138.71C141.893 150.93 144.945 149.666 147.195 147.415C149.446 145.165 150.71 142.112 150.71 138.93V12.6699C150.71 9.48732 149.446 6.43507 147.195 4.18463C144.945 1.93419 141.893 0.669922 138.71 0.669922ZM129.24 43.5999V129.47H21.9099V22.1299H129.24V43.5999Z" fill="black" />
                     <path d="M95.7799 43.6001H55.3799C52.1973 43.6001 49.145 44.8644 46.8946 47.1148C44.6442 49.3652 43.3799 52.4175 43.3799 55.6001V96.0001C43.3799 99.1827 44.6442 102.235 46.8946 104.485C49.145 106.736 52.1973 108 55.3799 108H95.7799C98.9625 108 102.015 106.736 104.265 104.485C106.516 102.235 107.78 99.1827 107.78 96.0001V55.6001C107.78 52.4175 106.516 49.3652 104.265 47.1148C102.015 44.8644 98.9625 43.6001 95.7799 43.6001Z" fill="black" />
@@ -292,7 +292,7 @@ export default function Home() {
                     <path d="M138.71 172.4H12.4399C9.25734 172.4 6.20509 173.664 3.95465 175.915C1.70421 178.165 0.439941 181.217 0.439941 184.4V310.67C0.439941 313.852 1.70421 316.905 3.95465 319.155C6.20509 321.406 9.25734 322.67 12.4399 322.67H138.71C141.893 322.67 144.945 321.406 147.195 319.155C149.446 316.905 150.71 313.852 150.71 310.67V184.4C150.71 181.217 149.446 178.165 147.195 175.915C144.945 173.664 141.893 172.4 138.71 172.4ZM129.24 215.33V301.2H21.9099V193.87H129.24V215.33Z" fill="black" />
                   </svg>
                 </label>
-                <input id="qr" type="file" className='hidden' onChange={HandlerOnChange} accept="image/* " />
+                <input id="qr" type="file"  className='hidden' onChange={HandlerOnChange} accept="image/* " />
 
 
               </form>}
@@ -338,7 +338,7 @@ export default function Home() {
 
 
 
-            {/* <div className='bg-transparent flex justify-center flex-wrap px-5 max-w-[400px] py-10 pb-[200px] lg:pb-0'>
+            {/* <div  className='bg-transparent flex justify-center flex-wrap px-5 max-w-[400px] py-10 pb-[200px] lg:pb-0'>
               <ScrollAnimation
                 animateIn='tada'
                 initiallyVisible={true}>
@@ -347,7 +347,7 @@ export default function Home() {
             </div> */}
             <a href="tel:76586948">
 
-              <marquee className="text-white py-5" behavior="" direction="">Llamanos ya clickea aqui (+591) 76586948</marquee>
+              <marquee  className="text-white py-5" behavior="" direction="">Llamanos ya clickea aqui (+591) 76586948</marquee>
 
             </a>
           </div>
@@ -359,24 +359,24 @@ export default function Home() {
 
       </section>
 
-      <section className='w-full z-1000 overflow-x-hidden' id="Servicios">
+      <section  className='w-full z-1000 overflow-x-hidden' id="Servicios">
 
-        <div className='relative px-5 py-12 w-full flex flex-col  lg:flex-row justify-around items-center  bg-gradient-to-tr from-[#000000c5] via-[#3259c5a9] to-[#2A52BE]'>
+        <div  className='relative px-5 py-12 w-full flex flex-col  lg:flex-row justify-around items-center  bg-gradient-to-tr from-[#000000c5] via-[#3259c5a9] to-[#2A52BE]'>
           <div>
-            {/* <div className='relative px-5 py-12 w-full flex flex-col  lg:flex-row justify-around items-center  bg-gradient-to-tr from-[#2A52BE] via-[#3259c5] to-[#2A52BE]'>
+            {/* <div  className='relative px-5 py-12 w-full flex flex-col  lg:flex-row justify-around items-center  bg-gradient-to-tr from-[#2A52BE] via-[#3259c5] to-[#2A52BE]'>
           <div> */}
-            <Subtitle><h3 className='text-[30px] text-[white] text-center font-medium  py-5'>Logistics Gear</h3></Subtitle>
+            <Subtitle><h3  className='text-[30px] text-[white] text-center font-medium  py-5'>Logistics Gear</h3></Subtitle>
             <ScrollAnimation animateIn='bounceInRight'
               animateOut='bounceOutLeft'
               initiallyVisible={true}
             >
-              <p className=' text-[16px] text-[white]'>
+              <p  className=' text-[16px] text-[white]'>
                 Establecida en 2017 y operando bajo la razón social Engranaje de la Logística Ltda., se especializa en ofrecer soluciones integrales de logística y transporte de carga. Nuestra experticia abarca desde la gestión de importaciones y exportaciones hasta el transporte de cargas de proyecto. Estamos especialmente capacitados en el manejo de cargas de grandes volúmenes, pesadas y sobredimensionadas. Nuestra filosofía se centra en la integración eficiente de los procesos logísticos, lo que nos permite optimizar el flujo de trabajo y reducir costos, asegurando que su negocio avance con eficiencia y confiabilidad.
               </p>
             </ScrollAnimation>
 
           </div>
-          <div className='w-full text-[white] grid grid-cols-2 gap-5 py-12'>
+          <div  className='w-full text-[white] grid grid-cols-2 gap-5 py-12'>
             <ScrollAnimation animateIn='flipInX'
               afterAnimatedIn={function afterAnimatedIn(v) {
                 var t = "Animate In finished.\n";
@@ -385,9 +385,9 @@ export default function Home() {
 
               }}
               initiallyVisible={true}>
-              <div className='flex flex-col justify-center items-center'>
-                <span className='text-[30px] font-medium'>2017</span>
-                <span className='text-center'>AÑO DE FUNDACIÓN</span>
+              <div  className='flex flex-col justify-center items-center'>
+                <span  className='text-[30px] font-medium'>2017</span>
+                <span  className='text-center'>AÑO DE FUNDACIÓN</span>
               </div>
             </ScrollAnimation>
             <ScrollAnimation animateIn='flipInX'
@@ -398,9 +398,9 @@ export default function Home() {
 
               }}
               initiallyVisible={true}>
-              <div className='flex flex-col justify-center items-center'>
-                <span className='text-[25px] font-medium'>La paz, Bolivia</span>
-                <span className='text-center'>SEDE MUNDIAL</span>
+              <div  className='flex flex-col justify-center items-center'>
+                <span  className='text-[25px] font-medium'>La paz, Bolivia</span>
+                <span  className='text-center'>SEDE MUNDIAL</span>
               </div>
             </ScrollAnimation>
             <ScrollAnimation animateIn='flipInX'
@@ -410,9 +410,9 @@ export default function Home() {
                 t += 'v.inViewport: ' + v.inViewport;
 
               }}>
-              <div className='flex flex-col justify-center items-center'>
-                <span className='text-[30px] font-medium'>100 000 $</span>
-                <span className='text-center'>FACTURACIÓN EN DOLARES EN 2023</span>
+              <div  className='flex flex-col justify-center items-center'>
+                <span  className='text-[30px] font-medium'>100 000 $</span>
+                <span  className='text-center'>FACTURACIÓN EN DOLARES EN 2023</span>
               </div>
             </ScrollAnimation>
             <ScrollAnimation animateIn='flipInX'
@@ -423,26 +423,26 @@ export default function Home() {
 
               }}
               initiallyVisible={true}>
-              <div className='flex flex-col justify-center items-center'>
-                <span className='text-[30px] font-medium'>1996</span>
-                <span className='text-center'>AÑO DE FUNDACIÓN</span>
+              <div  className='flex flex-col justify-center items-center'>
+                <span  className='text-[30px] font-medium'>1996</span>
+                <span  className='text-center'>AÑO DE FUNDACIÓN</span>
               </div>
             </ScrollAnimation>
           </div>
 
-          <div className='grid grid-cols-2 gap-2 w-full '>
+          <div  className='grid grid-cols-2 gap-2 w-full '>
 
             <button type="button" class="w-full border-[2px]  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center ">
               MISIÓN saber mas...
               <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
               </svg>
             </button>
 
             <button type="button" class="w-full border-[2px] text-gray-900 bg-[#F7BE38] hover:bg-[#F7BE38]/90 focus:ring-4 focus:outline-none focus:ring-[#F7BE38]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center ">
               VISIÓN saber mas...
               <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
               </svg>
             </button>
 
@@ -468,22 +468,22 @@ export default function Home() {
 
 
 
-// <div className='w-screen h-screen bg-gradient-to-t from-[#00061860] to-[#000618d1] flex flex-col justify-center items-center p-5 z-[50]'>
-//   <div className={`space-y-6 lg:space-y-3 w-[100%] rounded-[30px] max-w-[350px]`} >
-//     <div className='w-full text-center flex justify-center'>
-//       <img src="/logo.svg" className='w-[300px] z-[30]' alt="User" />
+// <div  className='w-screen h-screen bg-gradient-to-t from-[#00061860] to-[#000618d1] flex flex-col justify-center items-center p-5 z-[50]'>
+//   <div  className={`space-y-6 lg:space-y-3 w-[100%] rounded-[30px] max-w-[350px]`} >
+//     <div  className='w-full text-center flex justify-center'>
+//       <img src="/logo.svg"  className='w-[300px] z-[30]' alt="User" />
 //     </div>
-//     <h5 className="text-[22px] text-center font-bold text-white text-[#F1BA06] z-[50]">Nosotros</h5>
+//     <h5  className="text-[22px] text-center font-bold text-white text-[#F1BA06] z-[50]">Nosotros</h5>
 //     <br />
 
-//     <div className='text-center text-white text-[14px]'>
+//     <div  className='text-center text-white text-[14px]'>
 //       Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi omnis modi nihil ducimus. Voluptatum nisi facilis quam omnis ducimus, tenetur ullam minus quod nostrum maxime deserunt dolores veniam sapiente ad.
 //     </div>
 //     <br />
-//     <h5 className="text-[22px] text-center font-bold text-white text-[#F1BA06] z-[50]">Por que nosotros?</h5>
+//     <h5  className="text-[22px] text-center font-bold text-white text-[#F1BA06] z-[50]">Por que nosotros?</h5>
 //     <br />
 
-//     <div className='text-center text-white text-[14px]'>
+//     <div  className='text-center text-white text-[14px]'>
 //       Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi omnis modi nihil ducimus. Voluptatum nisi facilis quam omnis ducimus, tenetur ullam minus quod nostrum maxime deserunt dolores veniam sapiente ad.
 //     </div>
 //     <Button type="submit" theme="Primary" click={() => router.push('/Login')}>Iniciar Sesión</Button>

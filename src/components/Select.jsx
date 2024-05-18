@@ -21,24 +21,26 @@ export default function Select({arr, name, click, defaultValue, uuid}) {
         click(name, i, uuid)
     }
 
-
+console.log(defaultValue)
 
     return (
 
         <div 
-            className={`flex relative bg-gray-50 border border-gray-300 text-gray-900 text-[14px] rounded-xl focus:ring-blue-500 focus:border-blue-500  w-full px-5 p-3`} 
-            // className={`bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 
+             className={`flex relative bg-gray-50 border border-gray-300 text-gray-900 text-[14px] rounded-xl focus:ring-blue-500 focus:border-blue-500  w-full px-5 p-3`} 
+            //  className={`bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 
             // dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500`} 
             onClick={handlerSelect}>
-            {arr[0]} <span className={select ? 'absolute right-5 rotate-[270deg]' :'absolute right-5 rotate-90'}>{'>'}</span>
+           { defaultValue === 'Ninguno' ? 'Seleccionar':<li  className='flex items-center  cursor-pointer ' > <img src={defaultValue.flags.png}  className='mr-5 inline w-[30px] border-[1px]' alt="" />{defaultValue.translations.spa.official} </li> }
+            <span  className={select ? 'absolute right-5 rotate-[270deg]' :'absolute right-5 rotate-90'}>{'>'}</span>
             <ul 
 
-            className={select ? `absolute h-[100px] overflow-auto left-0 top-12 bg-gray-50 outline outline-1 outline-gray-300 text-gray-900 text-[14px] rounded-b-xl focus:ring-blue-500 focus:outline-blue-500 w-full p-3 z-10`: 'hidden' } 
-            // className={`bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 
+             className={select ? `absolute h-[100px] overflow-auto left-0 top-12 bg-gray-50 outline outline-1 outline-gray-300 text-gray-900 text-[14px] rounded-b-xl focus:ring-blue-500 focus:outline-blue-500 w-full p-3 z-10`: 'hidden' } 
+            //  className={`bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 
             // dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500`} 
             >
                 {
-                    arr.map((i, index)=> <li key={index} className='mb-2 cursor-pointer p-2' onClick={() => handlerUserState(name, i)}>{i}</li>)
+                    // console.log(arr)
+                    arr.map((i, index)=> <li key={index}  className='flex items-center mb-2 cursor-pointer p-2' onClick={() => handlerUserState(name, i)}> <img src={i.flags.png}  className='mr-5 inline w-[30px] border-[1px]' alt="" />{i.translations.spa.official} </li>)
                 }
             </ul>
         </div>
@@ -87,7 +89,7 @@ export default function Select({arr, name, click, defaultValue, uuid}) {
 
 //     return (
 
-//         <div className={select ? style.select : style.noSelect} onClick={handlerSelect}>
+//         <div  className={select ? style.select : style.noSelect} onClick={handlerSelect}>
 //             {state} <span>{'>'}</span>
 //             <ul>
 //                 {

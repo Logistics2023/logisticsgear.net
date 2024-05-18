@@ -16,11 +16,11 @@
       }
 
       .cls-3 {
-        stroke-width: .25px;
+        strokeWidth: .25px;
       }
 
       .cls-4, .cls-5 {
-        stroke-width: 0px;
+        strokeWidth: 0px;
       }
 
       .cls-5 {
